@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MyTaskManager.Views;
+using MyTaskManager.Models;
+using MyTaskManager.Controllers;
 
 namespace MyTaskManager
 {
@@ -16,7 +19,14 @@ namespace MyTaskManager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            
+            RegisterView aRegisterView = new RegisterView();
+
+            UserModel aUserModel = new UserModel();
+
+            UserController aUserController = new UserController(aUserModel, aRegisterView);
+
+            Application.Run(aRegisterView);
         }
     }
 }

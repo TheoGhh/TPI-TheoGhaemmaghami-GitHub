@@ -5,7 +5,7 @@ CREATE TABLE t_user (
     useFirstName varchar(50) NOT NULL,
     useLastName varchar(50) NOT NULL,
     useLogin varchar(50) NOT NULL,
-    usePassword varchar(50) NOT NULL,
+    usePassword varchar(255) NOT NULL,
     PRIMARY KEY (idUser)
 );
 
