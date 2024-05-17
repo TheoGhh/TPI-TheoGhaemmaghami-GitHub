@@ -76,8 +76,55 @@ namespace MyTaskManager.Models
                 // S'assure que la connexion se ferme peu importe si l'opération a fonctionné ou pas
                 _databaseConnection.Close();
             }
-            
+        }
 
+        public bool LoginUserToDB(string login, string password)
+        {
+            MySqlDataReader reader = null;
+            MySqlCommand query = null;
+
+            try
+            {
+                _databaseConnection.Open();
+
+                // Prépare la requête SQL pour retrouver le mot de passe hashé de l'utilisateur
+                query = new MySqlCommand(
+                    "SELECT usePassword FROM t_user WHERE useLogin = @useLogin", _databaseConnection);
+
+                query.Parameters.AddWithValue("@useLogin", login);
+                reader = query.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    string hashedPassword = reader["usePassword"].ToString();
+                    bool isValidPassword = BCrypt.Net.BCrypt.Verify(password, hashedPassword);
+                    reader.Close();
+                    return isValidPassword;
+                }
+                return false;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+            finally 
+            {
+                // Properly close and dispose of all resources
+                if (reader != null && !reader.IsClosed)
+                {
+                    reader.Close();
+                }
+                if (query != null)
+                {
+                    query.Dispose();
+                }
+                if (_databaseConnection != null)
+                {
+                    _databaseConnection.Close();
+                    _databaseConnection.Dispose();
+                }
+            }
         }
     }
 }

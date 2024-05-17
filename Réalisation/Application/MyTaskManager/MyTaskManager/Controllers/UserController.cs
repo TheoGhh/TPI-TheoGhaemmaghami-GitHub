@@ -18,14 +18,19 @@ namespace MyTaskManager.Controllers
     {
         private UserModel _model;
         private RegisterView _registerView;
+        private LoginView _loginView;
+        private MainView _mainView; 
 
-        public UserController(UserModel model, RegisterView registerView)
+        public UserController(UserModel model, RegisterView registerView, LoginView loginView)
         {
             _model = model;
             _model.Controller = this;
 
             _registerView = registerView;
             _registerView.Controller = this;
+
+            _loginView = loginView;
+            _loginView.Controller = this;
         }
 
         public bool RegisterNewUser(string firstName, string lastName, string login, string password)
@@ -33,7 +38,15 @@ namespace MyTaskManager.Controllers
             User newUser = new User(firstName, lastName, login, password);
 
             return _model.RegisterNewUserInDatabase(newUser);
-            
+        }
+
+        public bool LoginUser(string login, string password)
+        {            
+            bool IsLogged = _model.LoginUserToDB(login, password);
+            if (IsLogged)
+            {
+
+            }
             
         }
     }

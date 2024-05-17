@@ -21,12 +21,13 @@ namespace MyTaskManager
             Application.SetCompatibleTextRenderingDefault(false);
             
             RegisterView aRegisterView = new RegisterView();
+            LoginView aLoginView = new LoginView();
 
             UserModel aUserModel = new UserModel();
 
-            UserController aUserController = new UserController(aUserModel, aRegisterView);
+            UserController aUserController = new UserController(aUserModel, aRegisterView, aLoginView);
 
-            Application.Run(aRegisterView);
+            Application.Run(aLoginView);
         }
     }
 }
