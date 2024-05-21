@@ -45,20 +45,28 @@ namespace MyTaskManager.Models
         {
             try
             {
+                // Ouvre la connexion à la base de données
                 _databaseConnection.Open();
+
+                // Stocke et hache le mot de passe
                 string hashedPassword = BCrypt.Net.BCrypt.HashPassword(newUser.Password);
 
+                // Prépare la requête SQL pour insérer un nouvel utilisateur dans la base de données
                 MySqlCommand query = new MySqlCommand(
                     "INSERT INTO t_user VALUES(NULL, @useFirstName, @useLastName, @useLogin, @usePassword)", _databaseConnection);
-                
+
+                // Data Binding (permet d'éviter les injection SQL)
                 query.Parameters.AddWithValue("@useFirstName", newUser.FirstName);
                 query.Parameters.AddWithValue("@useLastName", newUser.LastName);
                 query.Parameters.AddWithValue("@useLogin", newUser.Login);
                 query.Parameters.AddWithValue("@usePassword", hashedPassword);
                 
+                // Exécute la requête SQL
                 int result = query.ExecuteNonQuery();
+
+                // Vérifie si l'opération a fonctionné
                 if (result > 0)
-                {
+                {           
                     return true;
                 }
                 else
@@ -91,6 +99,7 @@ namespace MyTaskManager.Models
                 query = new MySqlCommand(
                     "SELECT usePassword FROM t_user WHERE useLogin = @useLogin", _databaseConnection);
 
+                // Data Binding (permet d'éviter les injection SQL)
                 query.Parameters.AddWithValue("@useLogin", login);
                 reader = query.ExecuteReader();
 
