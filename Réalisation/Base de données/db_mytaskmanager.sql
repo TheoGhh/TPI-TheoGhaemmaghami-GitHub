@@ -4,7 +4,7 @@ CREATE TABLE t_user (
     idUser INT NOT NULL AUTO_INCREMENT,
     useFirstName varchar(50) NOT NULL,
     useLastName varchar(50) NOT NULL,
-    useLogin varchar(50) NOT NULL,
+    useLogin varchar(50) UNIQUE NOT NULL,
     usePassword varchar(255) NOT NULL,
     PRIMARY KEY (idUser)
 );

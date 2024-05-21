@@ -29,6 +29,7 @@ namespace MyTaskManager
         {
             bool isLogged = Controller.LoginUser(tbx_loginLogin.Text, tbx_loginPassword.Text);
             MessageBox.Show(isLogged ? "Vous êtes connecté !" : "Erreur lors de la connexion", "Connexion à un compte");
+            
         }
     }
 }

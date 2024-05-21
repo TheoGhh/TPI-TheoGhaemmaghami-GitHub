@@ -44,3 +44,4 @@ C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisati
 C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.CopyComplete
+C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Views.MainView.resources

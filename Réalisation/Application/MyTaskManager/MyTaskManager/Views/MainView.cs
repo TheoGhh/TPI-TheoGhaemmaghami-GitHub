@@ -16,5 +16,13 @@ namespace MyTaskManager.Views
         {
             InitializeComponent();
         }
+
+        private void MainView_Load(object sender, EventArgs e)
+        {
+            pbxLogo.Location = new Point(pnlNavBar.Width-Width / 2, pnlNavBar.Height / 2);
+            
+        }
+
+       
     }
 }

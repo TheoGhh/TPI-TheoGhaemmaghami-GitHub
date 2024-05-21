@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using MyTaskManager.Controllers;
 using MySql.Data.MySqlClient;
 using System.Security.Cryptography;
+using System.Windows.Forms;
+using System.Data;
 
 namespace MyTaskManager.Models
 {
@@ -87,53 +89,46 @@ namespace MyTaskManager.Models
         }
 
         public bool LoginUserToDB(string login, string password)
-        {
-            MySqlDataReader reader = null;
-            MySqlCommand query = null;
-
+        {   
             try
-            {
+            {                
+                // Ouvre la connexion à la base de données
                 _databaseConnection.Open();
 
-                // Prépare la requête SQL pour retrouver le mot de passe hashé de l'utilisateur
-                query = new MySqlCommand(
+                // Prépare la requête SQL pour retrouver le mot de passe associé au login de l'utilisateur
+                MySqlCommand query = new MySqlCommand(
                     "SELECT usePassword FROM t_user WHERE useLogin = @useLogin", _databaseConnection);
-
+                
                 // Data Binding (permet d'éviter les injection SQL)
                 query.Parameters.AddWithValue("@useLogin", login);
-                reader = query.ExecuteReader();
 
+                // Exécute la requête et récupère les résultats dans un objet reader
+                MySqlDataReader reader = query.ExecuteReader();
+                
+                // Lit et contrôle le résultat. Si une ligne est lue avec le login entré par l'utilisateur, l'utilisateur existe dans la DB
                 if (reader.Read())
                 {
-                    string hashedPassword = reader["usePassword"].ToString();
-                    bool isValidPassword = BCrypt.Net.BCrypt.Verify(password, hashedPassword);
-                    reader.Close();
-                    return isValidPassword;
+                    // Récupère le mot de passe haché de la base de données
+                    string hashedPassword = reader["usePassword"].ToString();    
+
+                    // Vérifie si la correspondance entre les mots de passe
+                    return BCrypt.Net.BCrypt.Verify(password, hashedPassword);
                 }
-                return false;
+                else
+                {
+                    return false;
+                }     
             }
             catch (Exception)
-            {
-
+            {        
                 return false;
             }
             finally 
             {
-                // Properly close and dispose of all resources
-                if (reader != null && !reader.IsClosed)
-                {
-                    reader.Close();
-                }
-                if (query != null)
-                {
-                    query.Dispose();
-                }
-                if (_databaseConnection != null)
-                {
-                    _databaseConnection.Close();
-                    _databaseConnection.Dispose();
-                }
+                // S'assure que la connexion se ferme peu importe si l'opération a fonctionné ou pas
+                _databaseConnection.Close();
             }
+
         }
     }
 }

@@ -42,12 +42,7 @@ namespace MyTaskManager.Controllers
 
         public bool LoginUser(string login, string password)
         {            
-            bool IsLogged = _model.LoginUserToDB(login, password);
-            if (IsLogged)
-            {
-
-            }
-            
+            return _model.LoginUserToDB(login, password);
         }
     }
 }

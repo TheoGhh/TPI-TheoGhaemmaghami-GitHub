@@ -133,6 +133,7 @@
             this.Controls.Add(this.tbx_loginLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "LoginView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Connexion";
             this.Load += new System.EventHandler(this.loginView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).EndInit();
