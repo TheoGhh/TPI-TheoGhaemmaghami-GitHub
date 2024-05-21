@@ -1,2 +1,7 @@
 responsive :
 https://www.youtube.com/watch?v=Yvo7j39wgFg
+
+https://stackoverflow.com/questions/74461458/how-to-make-c-sharp-winform-responsive
+
+fonctionnalité ajout colonne :
+https://www.simplilearn.com/tutorials/asp-dot-net-tutorial/c-sharp-list

@@ -12,6 +12,8 @@ namespace MyTaskManager.Views
 {
     public partial class MainView : Form
     {
+        List<Panel> panelList = new List<Panel>();
+        
         private TextBox tbxEditTitle = new TextBox();
 
         public MainView()
@@ -21,12 +23,16 @@ namespace MyTaskManager.Views
 
         private void MainView_Load(object sender, EventArgs e)
         {
-            tbxEditTitle.Size = label1.Size;
-            tbxEditTitle.Location = label1.Location;
             tbxEditTitle.Hide();
+            tbxEditTitle.MaxLength = 15;
+            tbxEditTitle.Size = label1.Size;
+            tbxEditTitle.Location = label1.Location;           
             tbxEditTitle.Leave += EditTextBox_Leave; // Gère la perte de focus
             tbxEditTitle.KeyPress += EditTextBox_KeyPress; // Gère la pression sur la touche Entrée
+            panel1.Controls.Add(tbxEditTitle);
 
+
+     
         }
         private void EditTextBox_Leave(object sender, EventArgs e)
         {
@@ -39,17 +45,18 @@ namespace MyTaskManager.Views
             if (e.KeyChar == (char)Keys.Enter)
             {
                 UpdateLabel(); // Met à jour le label et cache le TextBox
-                e.Handled = true; // Indique que l'événement de touche est géré
             }
         }
         private void UpdateLabel()
         {
             label1.Text = tbxEditTitle.Text; // Met à jour le texte du label
             tbxEditTitle.Hide(); // Cache le TextBox
+            label1.Show();
         }
 
         private void lblTitle_Click(object sender, EventArgs e)
         {
+            label1.Hide();
             tbxEditTitle.Text = label1.Text;
             tbxEditTitle.Show();
             tbxEditTitle.Focus();
@@ -66,6 +73,11 @@ namespace MyTaskManager.Views
         {
             this.Cursor = Cursors.Default;
             label1.ForeColor = Color.Black;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
