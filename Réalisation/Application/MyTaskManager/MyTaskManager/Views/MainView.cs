@@ -151,5 +151,10 @@ namespace MyTaskManager.Views
             }
         }
 
+        public void RemoveColumn(Column column)
+        {
+            columnsList.Remove(column);
+        }
+
     }
 }

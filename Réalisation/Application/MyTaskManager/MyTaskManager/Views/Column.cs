@@ -12,6 +12,7 @@ namespace MyTaskManager.Views
     {
         private Label _lblTitle;
         private TextBox _tbxEditTitle;
+        private PictureBox _pbxDeleteColumn;
 
         public Label LblTitle
         {
@@ -25,11 +26,18 @@ namespace MyTaskManager.Views
             set { _tbxEditTitle = value; }
         }
 
+        public PictureBox pbxDeleteColumn
+        {
+            get { return _pbxDeleteColumn; }
+            set { _pbxDeleteColumn = value; }
+        }
+
         public Column(string strTitle, Panel pnlMainContainer)
         {
             const int INT_WIDTH_CONTAINER = 170;
             const int INT_HEIGHT_CONTAINER = 590;
             const int INT_SPACING = 10;
+            const int INT_DELETE_SIZE = 25;
 
             int panelIndex = pnlMainContainer.Controls.Count + 1;
 
@@ -73,6 +81,23 @@ namespace MyTaskManager.Views
 
             TbxEditTitle.LostFocus += TbxEditTitle_LostFocus;
             TbxEditTitle.KeyPress += TbxEditTitle_KeyPress;
+
+            _pbxDeleteColumn = new PictureBox();
+            _pbxDeleteColumn.BackgroundImage = Properties.Resources.cross_delete;
+            _pbxDeleteColumn.BackgroundImageLayout = ImageLayout.Zoom;
+            _pbxDeleteColumn.Size = new Size(INT_DELETE_SIZE, INT_DELETE_SIZE);
+            _pbxDeleteColumn.Location = new Point(pnlColumn.Width - INT_DELETE_SIZE, pnlColumn.Height-5);  
+            pnlContainer.Controls.Add(_pbxDeleteColumn);
+            _pbxDeleteColumn.BringToFront();
+
+            _pbxDeleteColumn.Click += _pbxDeleteColumn_Click;
+        }
+
+        private void _pbxDeleteColumn_Click(object sender, EventArgs e)
+        {
+            
+
+            
         }
 
         /// <summary>
@@ -139,5 +164,7 @@ namespace MyTaskManager.Views
                 UpdateLabel();
             }
         }
+
+        
     }
 }
