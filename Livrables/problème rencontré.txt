@@ -1,0 +1,2 @@
+- Supression des colonnes (objet colonne) : j'instancie une picturebox qui, à son clic, déclenchera la suppression de la colonne en question.
+Le problème étant que la suppression devrait se faire depuis le code du formulaire.

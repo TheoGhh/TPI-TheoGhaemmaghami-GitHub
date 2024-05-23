@@ -101,7 +101,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\MyTaskController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Models\MyTask.cs" />
+    <Compile Include="Models\MyTaskModel.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Views\Column.cs">

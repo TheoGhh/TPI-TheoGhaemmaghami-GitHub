@@ -32,6 +32,7 @@
             this.btnAddColumn = new System.Windows.Forms.Button();
             this.pbxLogo = new System.Windows.Forms.PictureBox();
             this.pnlMainContent = new System.Windows.Forms.Panel();
+            this.btnDeleteColumn = new System.Windows.Forms.Button();
             this.pnlNavBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
@@ -41,6 +42,7 @@
             this.pnlNavBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlNavBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(207)))), ((int)(((byte)(0)))));
+            this.pnlNavBar.Controls.Add(this.btnDeleteColumn);
             this.pnlNavBar.Controls.Add(this.btnAddColumn);
             this.pnlNavBar.Controls.Add(this.pbxLogo);
             this.pnlNavBar.Location = new System.Drawing.Point(0, 0);
@@ -84,6 +86,19 @@
             this.pnlMainContent.Size = new System.Drawing.Size(976, 593);
             this.pnlMainContent.TabIndex = 9;
             // 
+            // btnDeleteColumn
+            // 
+            this.btnDeleteColumn.BackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteColumn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteColumn.ForeColor = System.Drawing.Color.Black;
+            this.btnDeleteColumn.Location = new System.Drawing.Point(12, 235);
+            this.btnDeleteColumn.Name = "btnDeleteColumn";
+            this.btnDeleteColumn.Size = new System.Drawing.Size(133, 37);
+            this.btnDeleteColumn.TabIndex = 9;
+            this.btnDeleteColumn.Text = "Supprimer une colonne";
+            this.btnDeleteColumn.UseVisualStyleBackColor = false;
+            this.btnDeleteColumn.Click += new System.EventHandler(this.btnDeleteColumn_Click);
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,5 +122,6 @@
         private System.Windows.Forms.PictureBox pbxLogo;
         private System.Windows.Forms.Button btnAddColumn;
         private System.Windows.Forms.Panel pnlMainContent;
+        private System.Windows.Forms.Button btnDeleteColumn;
     }
 }

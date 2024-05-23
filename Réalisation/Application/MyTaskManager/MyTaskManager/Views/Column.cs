@@ -12,32 +12,14 @@ namespace MyTaskManager.Views
     {
         private Label _lblTitle;
         private TextBox _tbxEditTitle;
-        private PictureBox _pbxDeleteColumn;
 
-        public Label LblTitle
-        {
-            get { return _lblTitle; }
-            set { _lblTitle = value; }
-        }
-
-        public TextBox TbxEditTitle
-        {
-            get { return _tbxEditTitle; }
-            set { _tbxEditTitle = value; }
-        }
-
-        public PictureBox pbxDeleteColumn
-        {
-            get { return _pbxDeleteColumn; }
-            set { _pbxDeleteColumn = value; }
-        }
 
         public Column(string strTitle, Panel pnlMainContainer)
         {
             const int INT_WIDTH_CONTAINER = 170;
             const int INT_HEIGHT_CONTAINER = 590;
             const int INT_SPACING = 10;
-            const int INT_DELETE_SIZE = 25;
+
 
             int panelIndex = pnlMainContainer.Controls.Count + 1;
 
@@ -48,57 +30,43 @@ namespace MyTaskManager.Views
             pnlContainer.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom;
             pnlMainContainer.Controls.Add(pnlContainer);
 
-            LblTitle = new Label();
-            LblTitle.Text = strTitle;
-            LblTitle.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
-            LblTitle.AutoSize = true;
-            LblTitle.Location = new Point(0, 0);
-            pnlContainer.Controls.Add(LblTitle);
+            _lblTitle = new Label();
+            _lblTitle.Text = strTitle;
+            _lblTitle.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
+            _lblTitle.AutoSize = true;
+            _lblTitle.Location = new Point(0, 0);
+            pnlContainer.Controls.Add(_lblTitle);
 
-            LblTitle.MouseEnter += LblTitle_MouseEnter;
-            LblTitle.MouseLeave += LblTitle_MouseLeave;
-            LblTitle.Click += LblTitle_Click;  
+            _lblTitle.MouseEnter += LblTitle_MouseEnter;
+            _lblTitle.MouseLeave += LblTitle_MouseLeave;
+            _lblTitle.Click += LblTitle_Click;  
 
             Panel pnlColumn = new Panel();
-            pnlColumn.Size = new Size(INT_WIDTH_CONTAINER, INT_HEIGHT_CONTAINER - LblTitle.Height);
-            pnlColumn.Location = new Point(0, LblTitle.Bottom);
+            pnlColumn.Size = new Size(INT_WIDTH_CONTAINER, INT_HEIGHT_CONTAINER - _lblTitle.Height);
+            pnlColumn.Location = new Point(0, _lblTitle.Bottom);
             pnlColumn.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             pnlColumn.BorderStyle = BorderStyle.FixedSingle;
             pnlColumn.AutoScroll = true;
             pnlColumn.AllowDrop = true;
             pnlContainer.Controls.Add(pnlColumn);
 
-            TbxEditTitle = new TextBox();
-            TbxEditTitle.Size = new Size(pnlColumn.Width, LblTitle.Height);
-            TbxEditTitle.Location = LblTitle.Location;
-            TbxEditTitle.Font = LblTitle.Font;
-            TbxEditTitle.MaxLength = 15;
-            TbxEditTitle.Text = LblTitle.Text;
-            TbxEditTitle.BorderStyle = BorderStyle.None;
-            TbxEditTitle.BackColor = SystemColors.Control;
-            TbxEditTitle.Hide();
-            pnlContainer.Controls.Add(TbxEditTitle);
+            _tbxEditTitle = new TextBox();
+            _tbxEditTitle.Size = new Size(pnlColumn.Width, _lblTitle.Height);
+            _tbxEditTitle.Location = _lblTitle.Location;
+            _tbxEditTitle.Font = _lblTitle.Font;
+            _tbxEditTitle.MaxLength = 15;
+            _tbxEditTitle.Text = _lblTitle.Text;
+            _tbxEditTitle.BorderStyle = BorderStyle.None;
+            _tbxEditTitle.BackColor = SystemColors.Control;
+            _tbxEditTitle.Hide();
+            pnlContainer.Controls.Add(_tbxEditTitle);
 
-            TbxEditTitle.LostFocus += TbxEditTitle_LostFocus;
-            TbxEditTitle.KeyPress += TbxEditTitle_KeyPress;
+            _tbxEditTitle.LostFocus += TbxEditTitle_LostFocus;
+            _tbxEditTitle.KeyPress += TbxEditTitle_KeyPress;
 
-            _pbxDeleteColumn = new PictureBox();
-            _pbxDeleteColumn.BackgroundImage = Properties.Resources.cross_delete;
-            _pbxDeleteColumn.BackgroundImageLayout = ImageLayout.Zoom;
-            _pbxDeleteColumn.Size = new Size(INT_DELETE_SIZE, INT_DELETE_SIZE);
-            _pbxDeleteColumn.Location = new Point(pnlColumn.Width - INT_DELETE_SIZE, pnlColumn.Height-5);  
-            pnlContainer.Controls.Add(_pbxDeleteColumn);
-            _pbxDeleteColumn.BringToFront();
-
-            _pbxDeleteColumn.Click += _pbxDeleteColumn_Click;
         }
 
-        private void _pbxDeleteColumn_Click(object sender, EventArgs e)
-        {
-            
-
-            
-        }
+ 
 
         /// <summary>
         /// Lorsque l'utilisateur passe le curseur sur un titre, le titre change de couleur
@@ -107,7 +75,7 @@ namespace MyTaskManager.Views
         /// <param name="e"></param>
         private void LblTitle_MouseEnter(object sender, EventArgs e)
         {
-            LblTitle.ForeColor = Color.Gray;
+            _lblTitle.ForeColor = Color.Gray;
         }
 
         /// <summary>
@@ -117,7 +85,7 @@ namespace MyTaskManager.Views
         /// <param name="e"></param>
         private void LblTitle_MouseLeave(object sender, EventArgs e)
         {
-            LblTitle.ForeColor = Color.Black;
+            _lblTitle.ForeColor = Color.Black;
         }
 
         /// <summary>
@@ -127,9 +95,9 @@ namespace MyTaskManager.Views
         /// <param name="e"></param>
         private void LblTitle_Click(object sender, EventArgs e)
         {
-            LblTitle.Hide();
-            TbxEditTitle.Show();
-            TbxEditTitle.Focus();
+            _lblTitle.Hide();
+            _tbxEditTitle.Show();
+            _tbxEditTitle.Focus();
         }
 
         /// <summary>
@@ -137,9 +105,9 @@ namespace MyTaskManager.Views
         /// </summary>
         private void UpdateLabel()
         {
-            LblTitle.Text = TbxEditTitle.Text;
-            TbxEditTitle.Hide();
-            LblTitle.Show();
+            _lblTitle.Text = _tbxEditTitle.Text;
+            _tbxEditTitle.Hide();
+            _lblTitle.Show();
         }
 
         /// <summary>
