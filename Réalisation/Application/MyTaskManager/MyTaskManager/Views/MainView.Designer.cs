@@ -60,6 +60,7 @@
             this.btnAddColumn.TabIndex = 8;
             this.btnAddColumn.Text = "Ajouter une colonne";
             this.btnAddColumn.UseVisualStyleBackColor = false;
+            this.btnAddColumn.Click += new System.EventHandler(this.btnAddColumn_Click);
             // 
             // pbxLogo
             // 

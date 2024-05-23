@@ -1,0 +1,6 @@
+Les étapes : Réaliser - Contrôler - Evaluer 
+se font un peu simultanément car au fur à mesure que je code et implémente des fonctionnalités, je test directement pour voir le résultat et le rendu dans l'application. De plus, pendant la réalisation ou je code, je me rends compte assez spontanément le code que je devrais revoir (Evaluer).
+
+Mais évidemment une fois que j'ai terminé d'implémenter complètement la ou les fonctionnalités, je refais des tests de tout pour voir si tout est compatible et fonctionnel. 
+
+Et je revisionne mon code pour déterminer une évaluation pour savoir ce qu'il me reste à faire éventuellement.
