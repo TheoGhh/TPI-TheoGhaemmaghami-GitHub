@@ -19,20 +19,14 @@ namespace MyTaskManager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            
-            RegisterView aRegisterView = new RegisterView();
-            LoginView aLoginView = new LoginView();
-            MainView aMainView = new MainView();
-            AddTaskView aAddTaskView = new AddTaskView();
 
             UserModel aUserModel = new UserModel();
 
-            UserController aUserController = new UserController(aUserModel, aRegisterView, aLoginView);
+            MainView aMainView = new MainView();
 
-            //Application.Run(aRegisterView);
-            //Application.Run(aLoginView);
-            //Application.Run(aMainView);
-            Application.Run(aAddTaskView);
+            UserController aUserController = new UserController(aUserModel, aMainView);
+
+            Application.Run(aMainView);
         }
     }
 }

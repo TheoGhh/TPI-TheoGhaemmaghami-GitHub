@@ -29,24 +29,26 @@
         private void InitializeComponent()
         {
             this.pnl_BackgroundDesign1 = new System.Windows.Forms.Panel();
+            this.lblImage = new System.Windows.Forms.Label();
+            this.lblURL = new System.Windows.Forms.Label();
             this.lblPriority = new System.Windows.Forms.Label();
             this.lblEndDate = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.lblURL = new System.Windows.Forms.Label();
-            this.lblImage = new System.Windows.Forms.Label();
+            this.pbx_logo = new System.Windows.Forms.PictureBox();
             this.tbxTitle = new System.Windows.Forms.TextBox();
             this.tbxDescription = new System.Windows.Forms.TextBox();
             this.datEndDate = new System.Windows.Forms.DateTimePicker();
             this.cbxPriority = new System.Windows.Forms.ComboBox();
             this.tbxURL = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_loginAccount = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pbx_logo = new System.Windows.Forms.PictureBox();
+            this.btnAddTask = new System.Windows.Forms.Button();
+            this.pbxImage = new System.Windows.Forms.PictureBox();
+            this.pnlDropImage = new System.Windows.Forms.Panel();
             this.pnl_BackgroundDesign1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).BeginInit();
+            this.pnlDropImage.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_BackgroundDesign1
@@ -64,6 +66,28 @@
             this.pnl_BackgroundDesign1.Name = "pnl_BackgroundDesign1";
             this.pnl_BackgroundDesign1.Size = new System.Drawing.Size(133, 586);
             this.pnl_BackgroundDesign1.TabIndex = 1;
+            // 
+            // lblImage
+            // 
+            this.lblImage.AutoSize = true;
+            this.lblImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblImage.Location = new System.Drawing.Point(76, 399);
+            this.lblImage.Name = "lblImage";
+            this.lblImage.Size = new System.Drawing.Size(46, 17);
+            this.lblImage.TabIndex = 8;
+            this.lblImage.Text = "Image";
+            this.lblImage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblURL
+            // 
+            this.lblURL.AutoSize = true;
+            this.lblURL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblURL.Location = new System.Drawing.Point(55, 359);
+            this.lblURL.Name = "lblURL";
+            this.lblURL.Size = new System.Drawing.Size(67, 17);
+            this.lblURL.TabIndex = 7;
+            this.lblURL.Text = "Lien URL";
+            this.lblURL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblPriority
             // 
@@ -109,27 +133,15 @@
             this.lblTitle.Text = "Titre";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lblURL
+            // pbx_logo
             // 
-            this.lblURL.AutoSize = true;
-            this.lblURL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblURL.Location = new System.Drawing.Point(55, 359);
-            this.lblURL.Name = "lblURL";
-            this.lblURL.Size = new System.Drawing.Size(67, 17);
-            this.lblURL.TabIndex = 7;
-            this.lblURL.Text = "Lien URL";
-            this.lblURL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblImage
-            // 
-            this.lblImage.AutoSize = true;
-            this.lblImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImage.Location = new System.Drawing.Point(76, 399);
-            this.lblImage.Name = "lblImage";
-            this.lblImage.Size = new System.Drawing.Size(46, 17);
-            this.lblImage.TabIndex = 8;
-            this.lblImage.Text = "Image";
-            this.lblImage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.pbx_logo.Image = global::MyTaskManager.Properties.Resources.TPI___MyTaskManager___Logo;
+            this.pbx_logo.Location = new System.Drawing.Point(3, 3);
+            this.pbx_logo.Name = "pbx_logo";
+            this.pbx_logo.Size = new System.Drawing.Size(130, 126);
+            this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbx_logo.TabIndex = 2;
+            this.pbx_logo.TabStop = false;
             // 
             // tbxTitle
             // 
@@ -187,46 +199,45 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Ajouter une tâche";
             // 
-            // btn_loginAccount
+            // btnAddTask
             // 
-            this.btn_loginAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_loginAccount.Location = new System.Drawing.Point(283, 533);
-            this.btn_loginAccount.Name = "btn_loginAccount";
-            this.btn_loginAccount.Size = new System.Drawing.Size(121, 34);
-            this.btn_loginAccount.TabIndex = 9;
-            this.btn_loginAccount.Text = "Ajouter";
-            this.btn_loginAccount.UseVisualStyleBackColor = true;
-            this.btn_loginAccount.Click += new System.EventHandler(this.btn_loginAccount_Click);
+            this.btnAddTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTask.Location = new System.Drawing.Point(283, 533);
+            this.btnAddTask.Name = "btnAddTask";
+            this.btnAddTask.Size = new System.Drawing.Size(121, 34);
+            this.btnAddTask.TabIndex = 9;
+            this.btnAddTask.Text = "Ajouter";
+            this.btnAddTask.UseVisualStyleBackColor = true;
+            this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
             // 
-            // pictureBox1
+            // pbxImage
             // 
-            this.pictureBox1.BackgroundImage = global::MyTaskManager.Properties.Resources.image_icon;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(152, 400);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 113);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.pbxImage.BackgroundImage = global::MyTaskManager.Properties.Resources.image_icon;
+            this.pbxImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbxImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbxImage.Location = new System.Drawing.Point(0, 0);
+            this.pbxImage.Name = "pbxImage";
+            this.pbxImage.Size = new System.Drawing.Size(119, 113);
+            this.pbxImage.TabIndex = 7;
+            this.pbxImage.TabStop = false;
             // 
-            // pbx_logo
+            // pnlDropImage
             // 
-            this.pbx_logo.Image = global::MyTaskManager.Properties.Resources.TPI___MyTaskManager___Logo;
-            this.pbx_logo.Location = new System.Drawing.Point(3, 3);
-            this.pbx_logo.Name = "pbx_logo";
-            this.pbx_logo.Size = new System.Drawing.Size(130, 126);
-            this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbx_logo.TabIndex = 2;
-            this.pbx_logo.TabStop = false;
+            this.pnlDropImage.AllowDrop = true;
+            this.pnlDropImage.Controls.Add(this.pbxImage);
+            this.pnlDropImage.Location = new System.Drawing.Point(154, 400);
+            this.pnlDropImage.Name = "pnlDropImage";
+            this.pnlDropImage.Size = new System.Drawing.Size(131, 115);
+            this.pnlDropImage.TabIndex = 10;
             // 
             // AddTaskView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(422, 587);
-            this.Controls.Add(this.btn_loginAccount);
+            this.Controls.Add(this.pnlDropImage);
+            this.Controls.Add(this.btnAddTask);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tbxURL);
             this.Controls.Add(this.cbxPriority);
             this.Controls.Add(this.datEndDate);
@@ -238,8 +249,9 @@
             this.Load += new System.EventHandler(this.AddTaskView_Load);
             this.pnl_BackgroundDesign1.ResumeLayout(false);
             this.pnl_BackgroundDesign1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).EndInit();
+            this.pnlDropImage.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,8 +272,9 @@
         private System.Windows.Forms.DateTimePicker datEndDate;
         private System.Windows.Forms.ComboBox cbxPriority;
         private System.Windows.Forms.TextBox tbxURL;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbxImage;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_loginAccount;
+        private System.Windows.Forms.Button btnAddTask;
+        private System.Windows.Forms.Panel pnlDropImage;
     }
 }

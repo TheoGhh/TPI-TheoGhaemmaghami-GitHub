@@ -3,7 +3,6 @@ C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisati
 C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\MyTaskManager.pdb
 C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.AssemblyReference.cache
 C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.SuggestedBindingRedirects.cache
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.loginView.resources
 C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Properties.Resources.resources
 C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.GenerateResource.cache
 C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.CoreCompileInputs.cache
@@ -93,3 +92,4 @@ H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskM
 H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.exe
 H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.pdb
 C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Views.AddTaskView.resources
+C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Views.LoginView.resources

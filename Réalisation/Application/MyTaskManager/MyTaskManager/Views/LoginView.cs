@@ -9,11 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MyTaskManager.Controllers;
 
-namespace MyTaskManager
+namespace MyTaskManager.Views
 {
     public partial class LoginView : Form
     {
         public UserController Controller { get; set; }
+
 
         public LoginView()
         {
@@ -28,8 +29,24 @@ namespace MyTaskManager
         private void btn_loginAccount_Click(object sender, EventArgs e)
         {
             bool isLogged = Controller.LoginUser(tbx_loginLogin.Text, tbx_loginPassword.Text);
-            MessageBox.Show(isLogged ? "Vous êtes connecté !" : "Erreur lors de la connexion", "Connexion à un compte");
+
+            if (isLogged)
+            {
+                MessageBox.Show("Vous êtes connecté !", "Connexion à un compte");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Connexion échouée...", "Connexion à un compte");
+            }
             
+        }
+
+        private void btnRegisterAccount_Click(object sender, EventArgs e)
+        {
+            RegisterView registerView = new RegisterView();
+            registerView.Controller = Controller;
+            registerView.ShowDialog();
         }
     }
 }

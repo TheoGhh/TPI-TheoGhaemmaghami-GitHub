@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.pnlNavBar = new System.Windows.Forms.Panel();
+            this.btnAddTask = new System.Windows.Forms.Button();
             this.btnDeleteColumn = new System.Windows.Forms.Button();
             this.btnAddColumn = new System.Windows.Forms.Button();
-            this.pnlMainContent = new System.Windows.Forms.Panel();
             this.pbxLogo = new System.Windows.Forms.PictureBox();
-            this.btnAddTask = new System.Windows.Forms.Button();
+            this.pnlMainContent = new System.Windows.Forms.Panel();
             this.pnlNavBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +52,19 @@
             this.pnlNavBar.Name = "pnlNavBar";
             this.pnlNavBar.Size = new System.Drawing.Size(160, 623);
             this.pnlNavBar.TabIndex = 7;
+            // 
+            // btnAddTask
+            // 
+            this.btnAddTask.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTask.ForeColor = System.Drawing.Color.Black;
+            this.btnAddTask.Location = new System.Drawing.Point(14, 293);
+            this.btnAddTask.Name = "btnAddTask";
+            this.btnAddTask.Size = new System.Drawing.Size(133, 37);
+            this.btnAddTask.TabIndex = 10;
+            this.btnAddTask.Text = "Ajouter une tâche";
+            this.btnAddTask.UseVisualStyleBackColor = false;
+            this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
             // 
             // btnDeleteColumn
             // 
@@ -79,16 +92,6 @@
             this.btnAddColumn.UseVisualStyleBackColor = false;
             this.btnAddColumn.Click += new System.EventHandler(this.btnAddColumn_Click);
             // 
-            // pnlMainContent
-            // 
-            this.pnlMainContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlMainContent.Location = new System.Drawing.Point(177, 12);
-            this.pnlMainContent.Name = "pnlMainContent";
-            this.pnlMainContent.Size = new System.Drawing.Size(976, 593);
-            this.pnlMainContent.TabIndex = 9;
-            // 
             // pbxLogo
             // 
             this.pbxLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -101,17 +104,15 @@
             this.pbxLogo.TabIndex = 7;
             this.pbxLogo.TabStop = false;
             // 
-            // btnAddTask
+            // pnlMainContent
             // 
-            this.btnAddTask.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddTask.ForeColor = System.Drawing.Color.Black;
-            this.btnAddTask.Location = new System.Drawing.Point(14, 293);
-            this.btnAddTask.Name = "btnAddTask";
-            this.btnAddTask.Size = new System.Drawing.Size(133, 37);
-            this.btnAddTask.TabIndex = 10;
-            this.btnAddTask.Text = "Ajouter une tâche";
-            this.btnAddTask.UseVisualStyleBackColor = false;
+            this.pnlMainContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlMainContent.Location = new System.Drawing.Point(177, 12);
+            this.pnlMainContent.Name = "pnlMainContent";
+            this.pnlMainContent.Size = new System.Drawing.Size(976, 593);
+            this.pnlMainContent.TabIndex = 9;
             // 
             // MainView
             // 

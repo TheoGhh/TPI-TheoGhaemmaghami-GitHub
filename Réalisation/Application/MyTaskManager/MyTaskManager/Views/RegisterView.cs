@@ -33,7 +33,16 @@ namespace MyTaskManager.Views
         private void btn_createAccount_Click(object sender, EventArgs e)
         {
             bool isRegistered = Controller.RegisterNewUser(tbx_registerFirstName.Text, tbx_registerLastName.Text, tbx_registerLogin.Text, tbx_registerPassword.Text);
-            MessageBox.Show(isRegistered ? "Compte utilisateur créé !" : "Erreur lors de la création du compte", "Création d'un compte");         
+            if (isRegistered)
+            {
+                MessageBox.Show("Compte utilisateur créé !", "Création de compte");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Erreur lors de la création du compte", "Création d'un compte");
+            }
+                   
         }
     }
 }

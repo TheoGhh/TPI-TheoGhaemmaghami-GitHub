@@ -17,20 +17,18 @@ namespace MyTaskManager.Controllers
     public class UserController
     {
         private UserModel _model;
-        private RegisterView _registerView;
+        private MainView _mainView;
         private LoginView _loginView;
-        private MainView _mainView; 
 
-        public UserController(UserModel model, RegisterView registerView, LoginView loginView)
+        public UserController(UserModel model,  MainView mainView)
         {
             _model = model;
             _model.Controller = this;
 
-            _registerView = registerView;
-            _registerView.Controller = this;
+            
 
-            _loginView = loginView;
-            _loginView.Controller = this;
+            _mainView = mainView;
+            _mainView.UserController = this;
         }
 
         public bool RegisterNewUser(string firstName, string lastName, string login, string password)

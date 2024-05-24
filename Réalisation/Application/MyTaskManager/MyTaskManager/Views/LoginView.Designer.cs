@@ -1,4 +1,4 @@
-﻿namespace MyTaskManager
+﻿namespace MyTaskManager.Views
 {
     partial class LoginView
     {
@@ -35,7 +35,9 @@
             this.pbx_logo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_title = new System.Windows.Forms.Label();
-            this.btn_loginAccount = new System.Windows.Forms.Button();
+            this.btnLoginAccount = new System.Windows.Forms.Button();
+            this.btnRegisterAccount = new System.Windows.Forms.Button();
+            this.lblNoAccount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -109,23 +111,47 @@
             this.lbl_title.TabIndex = 0;
             this.lbl_title.Text = "MyTaskManager";
             // 
-            // btn_loginAccount
+            // btnLoginAccount
             // 
-            this.btn_loginAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_loginAccount.Location = new System.Drawing.Point(337, 218);
-            this.btn_loginAccount.Name = "btn_loginAccount";
-            this.btn_loginAccount.Size = new System.Drawing.Size(121, 34);
-            this.btn_loginAccount.TabIndex = 7;
-            this.btn_loginAccount.Text = "Se connecter";
-            this.btn_loginAccount.UseVisualStyleBackColor = true;
-            this.btn_loginAccount.Click += new System.EventHandler(this.btn_loginAccount_Click);
+            this.btnLoginAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoginAccount.Location = new System.Drawing.Point(337, 218);
+            this.btnLoginAccount.Name = "btnLoginAccount";
+            this.btnLoginAccount.Size = new System.Drawing.Size(121, 34);
+            this.btnLoginAccount.TabIndex = 7;
+            this.btnLoginAccount.Text = "Se connecter";
+            this.btnLoginAccount.UseVisualStyleBackColor = true;
+            this.btnLoginAccount.Click += new System.EventHandler(this.btn_loginAccount_Click);
+            // 
+            // btnRegisterAccount
+            // 
+            this.btnRegisterAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterAccount.Location = new System.Drawing.Point(337, 278);
+            this.btnRegisterAccount.Name = "btnRegisterAccount";
+            this.btnRegisterAccount.Size = new System.Drawing.Size(121, 34);
+            this.btnRegisterAccount.TabIndex = 8;
+            this.btnRegisterAccount.Text = "Créer un compte";
+            this.btnRegisterAccount.UseVisualStyleBackColor = true;
+            this.btnRegisterAccount.Click += new System.EventHandler(this.btnRegisterAccount_Click);
+            // 
+            // lblNoAccount
+            // 
+            this.lblNoAccount.AutoSize = true;
+            this.lblNoAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoAccount.Location = new System.Drawing.Point(208, 287);
+            this.lblNoAccount.Name = "lblNoAccount";
+            this.lblNoAccount.Size = new System.Drawing.Size(114, 17);
+            this.lblNoAccount.TabIndex = 9;
+            this.lblNoAccount.Text = "Pas de compte ?";
+            this.lblNoAccount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // LoginView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 284);
-            this.Controls.Add(this.btn_loginAccount);
+            this.ClientSize = new System.Drawing.Size(507, 335);
+            this.Controls.Add(this.lblNoAccount);
+            this.Controls.Add(this.btnRegisterAccount);
+            this.Controls.Add(this.btnLoginAccount);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbl_loginPassword);
             this.Controls.Add(this.lbl_loginLogin);
@@ -153,7 +179,9 @@
         private System.Windows.Forms.PictureBox pbx_logo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbl_title;
-        private System.Windows.Forms.Button btn_loginAccount;
+        private System.Windows.Forms.Button btnLoginAccount;
+        private System.Windows.Forms.Button btnRegisterAccount;
+        private System.Windows.Forms.Label lblNoAccount;
     }
 }
 
