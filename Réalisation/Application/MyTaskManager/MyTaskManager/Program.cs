@@ -23,6 +23,7 @@ namespace MyTaskManager
             RegisterView aRegisterView = new RegisterView();
             LoginView aLoginView = new LoginView();
             MainView aMainView = new MainView();
+            AddTaskView aAddTaskView = new AddTaskView();
 
             UserModel aUserModel = new UserModel();
 
@@ -30,7 +31,8 @@ namespace MyTaskManager
 
             //Application.Run(aRegisterView);
             //Application.Run(aLoginView);
-            Application.Run(aMainView);
+            //Application.Run(aMainView);
+            Application.Run(aAddTaskView);
         }
     }
 }

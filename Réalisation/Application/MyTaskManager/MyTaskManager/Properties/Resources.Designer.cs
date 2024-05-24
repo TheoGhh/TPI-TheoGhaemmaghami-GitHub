@@ -73,6 +73,16 @@ namespace MyTaskManager.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap image_icon {
+            get {
+                object obj = ResourceManager.GetObject("image_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap TPI___MyTaskManager___Logo {
             get {
                 object obj = ResourceManager.GetObject("TPI - MyTaskManager - Logo", resourceCulture);

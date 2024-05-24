@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.pnlNavBar = new System.Windows.Forms.Panel();
-            this.btnAddColumn = new System.Windows.Forms.Button();
-            this.pbxLogo = new System.Windows.Forms.PictureBox();
-            this.pnlMainContent = new System.Windows.Forms.Panel();
             this.btnDeleteColumn = new System.Windows.Forms.Button();
+            this.btnAddColumn = new System.Windows.Forms.Button();
+            this.pnlMainContent = new System.Windows.Forms.Panel();
+            this.pbxLogo = new System.Windows.Forms.PictureBox();
+            this.btnAddTask = new System.Windows.Forms.Button();
             this.pnlNavBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
@@ -42,6 +43,7 @@
             this.pnlNavBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlNavBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(207)))), ((int)(((byte)(0)))));
+            this.pnlNavBar.Controls.Add(this.btnAddTask);
             this.pnlNavBar.Controls.Add(this.btnDeleteColumn);
             this.pnlNavBar.Controls.Add(this.btnAddColumn);
             this.pnlNavBar.Controls.Add(this.pbxLogo);
@@ -50,6 +52,19 @@
             this.pnlNavBar.Name = "pnlNavBar";
             this.pnlNavBar.Size = new System.Drawing.Size(160, 623);
             this.pnlNavBar.TabIndex = 7;
+            // 
+            // btnDeleteColumn
+            // 
+            this.btnDeleteColumn.BackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteColumn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteColumn.ForeColor = System.Drawing.Color.Black;
+            this.btnDeleteColumn.Location = new System.Drawing.Point(12, 235);
+            this.btnDeleteColumn.Name = "btnDeleteColumn";
+            this.btnDeleteColumn.Size = new System.Drawing.Size(133, 37);
+            this.btnDeleteColumn.TabIndex = 9;
+            this.btnDeleteColumn.Text = "Supprimer une colonne";
+            this.btnDeleteColumn.UseVisualStyleBackColor = false;
+            this.btnDeleteColumn.Click += new System.EventHandler(this.btnDeleteColumn_Click);
             // 
             // btnAddColumn
             // 
@@ -64,6 +79,16 @@
             this.btnAddColumn.UseVisualStyleBackColor = false;
             this.btnAddColumn.Click += new System.EventHandler(this.btnAddColumn_Click);
             // 
+            // pnlMainContent
+            // 
+            this.pnlMainContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlMainContent.Location = new System.Drawing.Point(177, 12);
+            this.pnlMainContent.Name = "pnlMainContent";
+            this.pnlMainContent.Size = new System.Drawing.Size(976, 593);
+            this.pnlMainContent.TabIndex = 9;
+            // 
             // pbxLogo
             // 
             this.pbxLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -76,28 +101,17 @@
             this.pbxLogo.TabIndex = 7;
             this.pbxLogo.TabStop = false;
             // 
-            // pnlMainContent
+            // btnAddTask
             // 
-            this.pnlMainContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlMainContent.Location = new System.Drawing.Point(177, 12);
-            this.pnlMainContent.Name = "pnlMainContent";
-            this.pnlMainContent.Size = new System.Drawing.Size(976, 593);
-            this.pnlMainContent.TabIndex = 9;
-            // 
-            // btnDeleteColumn
-            // 
-            this.btnDeleteColumn.BackColor = System.Drawing.Color.Transparent;
-            this.btnDeleteColumn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteColumn.ForeColor = System.Drawing.Color.Black;
-            this.btnDeleteColumn.Location = new System.Drawing.Point(12, 235);
-            this.btnDeleteColumn.Name = "btnDeleteColumn";
-            this.btnDeleteColumn.Size = new System.Drawing.Size(133, 37);
-            this.btnDeleteColumn.TabIndex = 9;
-            this.btnDeleteColumn.Text = "Supprimer une colonne";
-            this.btnDeleteColumn.UseVisualStyleBackColor = false;
-            this.btnDeleteColumn.Click += new System.EventHandler(this.btnDeleteColumn_Click);
+            this.btnAddTask.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTask.ForeColor = System.Drawing.Color.Black;
+            this.btnAddTask.Location = new System.Drawing.Point(14, 293);
+            this.btnAddTask.Name = "btnAddTask";
+            this.btnAddTask.Size = new System.Drawing.Size(133, 37);
+            this.btnAddTask.TabIndex = 10;
+            this.btnAddTask.Text = "Ajouter une tâche";
+            this.btnAddTask.UseVisualStyleBackColor = false;
             // 
             // MainView
             // 
@@ -123,5 +137,6 @@
         private System.Windows.Forms.Button btnAddColumn;
         private System.Windows.Forms.Panel pnlMainContent;
         private System.Windows.Forms.Button btnDeleteColumn;
+        private System.Windows.Forms.Button btnAddTask;
     }
 }

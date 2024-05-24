@@ -92,3 +92,4 @@ H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskM
 H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.CopyComplete
 H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.exe
 H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.pdb
+C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Views.AddTaskView.resources

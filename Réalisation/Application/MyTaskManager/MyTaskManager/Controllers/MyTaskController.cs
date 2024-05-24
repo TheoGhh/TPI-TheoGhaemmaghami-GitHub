@@ -10,9 +10,18 @@ namespace MyTaskManager.Controllers
 {
     public class MyTaskController
     {
-        public MyTaskController()
-        {
+        private AddTaskView _addTaskView;
+        private MyTaskModel _model;
 
+        public MyTaskController(AddTaskView addTaskView, MyTaskModel myTaskModel)
+        {
+            _addTaskView = addTaskView;
+            _addTaskView.Controller = this;
+
+            _model = myTaskModel;
+            _model.Controller = this;
         }
+
+
     }
 }
