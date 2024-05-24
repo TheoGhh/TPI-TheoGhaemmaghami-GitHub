@@ -26,6 +26,7 @@ namespace MyTaskManager.Views
             Panel pnlContainer = new Panel();
             pnlContainer.Name = "pnlContainer" + panelIndex;
             pnlContainer.Size = new Size(INT_WIDTH_CONTAINER, INT_HEIGHT_CONTAINER);
+            //pnlContainer.Location = new Point(0, 0);
             pnlContainer.Location = new Point(pnlMainContainer.Controls.Count * (INT_WIDTH_CONTAINER + INT_SPACING), 0);
             pnlContainer.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom;
             pnlMainContainer.Controls.Add(pnlContainer);

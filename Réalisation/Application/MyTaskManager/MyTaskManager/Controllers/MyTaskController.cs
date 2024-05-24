@@ -24,9 +24,11 @@ namespace MyTaskManager.Controllers
             _model.Controller = this;
         }
 
-        public void AddTask(string title, string description, DateTime endDate, int priority, string url, Image image)
+        public bool AddTask(string title, string description, DateTime endDate, int priority, string url, Image image)
         {
             MyTask newTask = new MyTask(title, description, endDate, priority, url, image);
+
+            return _model.AddNewTaskInDatabase(newTask);
             
         }
 

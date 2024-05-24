@@ -2,3 +2,5 @@
 Le problème étant que la suppression devrait se faire depuis le code du formulaire.
 
 - Réflexion sur la façon de gérer les colonnes : tableaux préfaits, objet, ...
+
+- Gestion des vues en MVC

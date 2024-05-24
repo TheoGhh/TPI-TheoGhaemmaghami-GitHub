@@ -52,7 +52,13 @@ namespace MyTaskManager.Views
 
         private void btnAddTask_Click(object sender, EventArgs e)
         {
-
+            Controller.AddTask(
+                tbxTitle.Text,
+                tbxDescription.Text,
+                datEndDate.Value,
+                cbxPriority.SelectedIndex,
+                tbxURL.Text,
+                pbxImage.BackgroundImage);
         }
     }
 }

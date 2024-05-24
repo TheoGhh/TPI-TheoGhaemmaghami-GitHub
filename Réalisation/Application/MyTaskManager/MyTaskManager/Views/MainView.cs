@@ -37,9 +37,11 @@ namespace MyTaskManager.Views
             Column column = new Column("A FAIRE", pnlMainContent);
             Column column2 = new Column("TERMINE", pnlMainContent);
             columnsList.Add(column);
-            columnsList.Add(column2);     
+            columnsList.Add(column2);
             
+      
         }
+
 
         /// <summary>
         /// Clic du bouton qui ajoute une nouvelle colonne
@@ -60,7 +62,7 @@ namespace MyTaskManager.Views
         {
             if (columnsList.Count > 2)
             {
-                Column columnToDelete = columnsList[columnsList.Count - 1];
+                Column columnToDelete = columnsList.Last();
                 columnsList.Remove(columnToDelete);
                 pnlMainContent.Controls.Remove(columnToDelete);
             }

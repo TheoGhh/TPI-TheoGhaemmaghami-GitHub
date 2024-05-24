@@ -23,7 +23,7 @@ namespace MyTaskManager.Views
 
         private void loginView_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btn_loginAccount_Click(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace MyTaskManager.Views
             {
                 MessageBox.Show("Connexion échouée...", "Connexion à un compte");
             }
-            
+ 
         }
 
         private void btnRegisterAccount_Click(object sender, EventArgs e)
