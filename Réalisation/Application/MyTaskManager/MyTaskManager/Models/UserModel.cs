@@ -77,9 +77,10 @@ namespace MyTaskManager.Models
                 }
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return false;
+                
             }
             finally
             {
@@ -97,7 +98,7 @@ namespace MyTaskManager.Models
 
                 // Prépare la requête SQL pour retrouver le mot de passe associé au login de l'utilisateur
                 MySqlCommand query = new MySqlCommand(
-                    "SELECT usePassword FROM t_user WHERE useLogin = @useLogin", _databaseConnection);
+                    "SELECT usePassword, idUser FROM t_user WHERE useLogin = @useLogin", _databaseConnection);
                 
                 // Data Binding (permet d'éviter les injection SQL)
                 query.Parameters.AddWithValue("@useLogin", login);
@@ -109,10 +110,13 @@ namespace MyTaskManager.Models
                 if (reader.Read())
                 {
                     // Récupère le mot de passe haché de la base de données
-                    string hashedPassword = reader["usePassword"].ToString();    
+                    string hashedPassword = reader["usePassword"].ToString();
+
+                    // Récupère l'id de l'utilisateur connecté
+                    int userId = (int)reader["idUser"];
 
                     // Vérifie si la correspondance entre les mots de passe
-                    return BCrypt.Net.BCrypt.Verify(password, hashedPassword);
+                    return BCrypt.Net.BCrypt.Verify(password, hashedPassword);  
                 }
                 else
                 {

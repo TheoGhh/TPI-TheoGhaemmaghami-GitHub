@@ -22,11 +22,11 @@ namespace MyTaskManager
 
             UserModel aUserModel = new UserModel();
 
-            MainView aMainView = new MainView();
+            LoginView aLoginView = new LoginView();
 
-            UserController aUserController = new UserController(aUserModel, aMainView);
+            UserController aUserController = new UserController(aUserModel, aLoginView);
 
-            Application.Run(aMainView);
+            Application.Run(aLoginView);
         }
     }
 }

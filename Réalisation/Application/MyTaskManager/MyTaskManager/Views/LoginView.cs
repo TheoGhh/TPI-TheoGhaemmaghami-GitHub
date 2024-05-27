@@ -28,18 +28,11 @@ namespace MyTaskManager.Views
 
         private void btn_loginAccount_Click(object sender, EventArgs e)
         {
-            bool isLogged = Controller.LoginUser(tbx_loginLogin.Text, tbx_loginPassword.Text);
-
-            if (isLogged)
-            {
-                MessageBox.Show("Vous êtes connecté !", "Connexion à un compte");
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Connexion échouée...", "Connexion à un compte");
-            }
- 
+            
+            MainView mainView = new MainView();
+            mainView.UserController = Controller;
+            mainView.ShowDialog();
+            this.Hide();
         }
 
         private void btnRegisterAccount_Click(object sender, EventArgs e)
