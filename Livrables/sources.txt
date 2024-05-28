@@ -11,3 +11,9 @@ rapport MVC :
 https://www.geeksforgeeks.org/mvc-framework-introduction/
 https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contrôleur
 https://www.irif.fr/~carton/Enseignement/InterfacesGraphiques/Cours/Swing/mvc.html
+
+base de données :
+https://www.base-de-donnees.com/mld/
+https://www.techno-science.net/definition/739.html
+https://ineumann.developpez.com/tutoriels/merise/initiation-merise/
+https://fr.wikipedia.org/wiki/Merise_(informatique)
