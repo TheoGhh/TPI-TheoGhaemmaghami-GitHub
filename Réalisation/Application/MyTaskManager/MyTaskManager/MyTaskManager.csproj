@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A3E7E7A4-B828-45C7-BBDA-0D248ED1C2FA}</ProjectGuid>
+    <ProjectGuid>{9EE9CA50-516E-4E13-8574-47FED1121A10}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>MyTaskManager</RootNamespace>
     <AssemblyName>MyTaskManager</AssemblyName>
@@ -103,10 +103,14 @@
   <ItemGroup>
     <Compile Include="Controllers\MyTaskController.cs" />
     <Compile Include="Controllers\UserController.cs" />
-    <Compile Include="Models\MyTask.cs" />
+    <Compile Include="Models\MyTask.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Models\MyTaskModel.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\AddTaskView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,8 +126,6 @@
     <Compile Include="Views\LoginView.Designer.cs">
       <DependentUpon>LoginView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\MainView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,12 +138,6 @@
     <Compile Include="Views\RegisterView.Designer.cs">
       <DependentUpon>RegisterView.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\AddTaskView.resx">
-      <DependentUpon>AddTaskView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\LoginView.resx">
-      <DependentUpon>LoginView.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -152,6 +148,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\AddTaskView.resx">
+      <DependentUpon>AddTaskView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoginView.resx">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,17 +174,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\TPI - MyTaskManager - Logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\trash.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cross-delete.png" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\image-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TPI - MyTaskManager - Logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

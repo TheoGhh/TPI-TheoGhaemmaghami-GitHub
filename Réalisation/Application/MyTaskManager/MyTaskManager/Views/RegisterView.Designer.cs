@@ -28,195 +28,191 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterView));
-            this.pnl_BackgroundDesign1 = new System.Windows.Forms.Panel();
-            this.lbl_loginPassword = new System.Windows.Forms.Label();
-            this.lbl_loginLogin = new System.Windows.Forms.Label();
-            this.lbl_registerLastName = new System.Windows.Forms.Label();
-            this.lbl_registerFirstName = new System.Windows.Forms.Label();
-            this.pbx_logo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbl_title = new System.Windows.Forms.Label();
-            this.tbx_registerFirstName = new System.Windows.Forms.TextBox();
-            this.tbx_registerLastName = new System.Windows.Forms.TextBox();
-            this.tbx_registerLogin = new System.Windows.Forms.TextBox();
-            this.tbx_registerPassword = new System.Windows.Forms.TextBox();
-            this.btn_createAccount = new System.Windows.Forms.Button();
-            this.pnl_BackgroundDesign1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.pbxLogo = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.lblLogin = new System.Windows.Forms.Label();
+            this.lblLastName = new System.Windows.Forms.Label();
+            this.lblFirstName = new System.Windows.Forms.Label();
+            this.tbxFirstName = new System.Windows.Forms.TextBox();
+            this.tbxLastName = new System.Windows.Forms.TextBox();
+            this.tbxLogin = new System.Windows.Forms.TextBox();
+            this.tbxPassword = new System.Windows.Forms.TextBox();
+            this.btnCreateUser = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnl_BackgroundDesign1
-            // 
-            this.pnl_BackgroundDesign1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(207)))), ((int)(((byte)(0)))));
-            this.pnl_BackgroundDesign1.Controls.Add(this.lbl_loginPassword);
-            this.pnl_BackgroundDesign1.Controls.Add(this.lbl_loginLogin);
-            this.pnl_BackgroundDesign1.Controls.Add(this.lbl_registerLastName);
-            this.pnl_BackgroundDesign1.Controls.Add(this.lbl_registerFirstName);
-            this.pnl_BackgroundDesign1.Controls.Add(this.pbx_logo);
-            this.pnl_BackgroundDesign1.Location = new System.Drawing.Point(-3, -2);
-            this.pnl_BackgroundDesign1.Margin = new System.Windows.Forms.Padding(2);
-            this.pnl_BackgroundDesign1.Name = "pnl_BackgroundDesign1";
-            this.pnl_BackgroundDesign1.Size = new System.Drawing.Size(131, 415);
-            this.pnl_BackgroundDesign1.TabIndex = 0;
-            // 
-            // lbl_loginPassword
-            // 
-            this.lbl_loginPassword.AutoSize = true;
-            this.lbl_loginPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_loginPassword.Location = new System.Drawing.Point(29, 310);
-            this.lbl_loginPassword.Name = "lbl_loginPassword";
-            this.lbl_loginPassword.Size = new System.Drawing.Size(93, 17);
-            this.lbl_loginPassword.TabIndex = 6;
-            this.lbl_loginPassword.Text = "Mot de passe";
-            this.lbl_loginPassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbl_loginLogin
-            // 
-            this.lbl_loginLogin.AutoSize = true;
-            this.lbl_loginLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_loginLogin.Location = new System.Drawing.Point(79, 265);
-            this.lbl_loginLogin.Name = "lbl_loginLogin";
-            this.lbl_loginLogin.Size = new System.Drawing.Size(43, 17);
-            this.lbl_loginLogin.TabIndex = 5;
-            this.lbl_loginLogin.Text = "Login";
-            this.lbl_loginLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbl_registerLastName
-            // 
-            this.lbl_registerLastName.AutoSize = true;
-            this.lbl_registerLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_registerLastName.Location = new System.Drawing.Point(85, 220);
-            this.lbl_registerLastName.Name = "lbl_registerLastName";
-            this.lbl_registerLastName.Size = new System.Drawing.Size(37, 17);
-            this.lbl_registerLastName.TabIndex = 4;
-            this.lbl_registerLastName.Text = "Nom";
-            this.lbl_registerLastName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbl_registerFirstName
-            // 
-            this.lbl_registerFirstName.AutoSize = true;
-            this.lbl_registerFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_registerFirstName.Location = new System.Drawing.Point(65, 171);
-            this.lbl_registerFirstName.Name = "lbl_registerFirstName";
-            this.lbl_registerFirstName.Size = new System.Drawing.Size(57, 17);
-            this.lbl_registerFirstName.TabIndex = 3;
-            this.lbl_registerFirstName.Text = "Prénom";
-            this.lbl_registerFirstName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // pbx_logo
-            // 
-            this.pbx_logo.Image = global::MyTaskManager.Properties.Resources.TPI___MyTaskManager___Logo;
-            this.pbx_logo.Location = new System.Drawing.Point(3, 3);
-            this.pbx_logo.Name = "pbx_logo";
-            this.pbx_logo.Size = new System.Drawing.Size(125, 126);
-            this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbx_logo.TabIndex = 2;
-            this.pbx_logo.TabStop = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(207)))), ((int)(((byte)(0)))));
-            this.panel1.Controls.Add(this.lbl_title);
-            this.panel1.Location = new System.Drawing.Point(128, -2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Controls.Add(this.lblTitle);
+            this.panel1.Controls.Add(this.pbxLogo);
+            this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(273, 120);
-            this.panel1.TabIndex = 1;
+            this.panel1.Size = new System.Drawing.Size(342, 110);
+            this.panel1.TabIndex = 2;
             // 
-            // lbl_title
+            // lblTitle
             // 
-            this.lbl_title.AutoSize = true;
-            this.lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_title.Location = new System.Drawing.Point(16, 49);
-            this.lbl_title.Name = "lbl_title";
-            this.lbl_title.Size = new System.Drawing.Size(185, 26);
-            this.lbl_title.TabIndex = 0;
-            this.lbl_title.Text = "MyTaskManager";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(126, 41);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(163, 24);
+            this.lblTitle.TabIndex = 2;
+            this.lblTitle.Text = "MyTaskManager";
             // 
-            // tbx_registerFirstName
+            // pbxLogo
             // 
-            this.tbx_registerFirstName.Location = new System.Drawing.Point(149, 168);
-            this.tbx_registerFirstName.Name = "tbx_registerFirstName";
-            this.tbx_registerFirstName.Size = new System.Drawing.Size(198, 20);
-            this.tbx_registerFirstName.TabIndex = 2;
+            this.pbxLogo.BackgroundImage = global::MyTaskManager.Properties.Resources.TPI___MyTaskManager___Logo;
+            this.pbxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbxLogo.Location = new System.Drawing.Point(0, 0);
+            this.pbxLogo.Name = "pbxLogo";
+            this.pbxLogo.Size = new System.Drawing.Size(110, 110);
+            this.pbxLogo.TabIndex = 1;
+            this.pbxLogo.TabStop = false;
             // 
-            // tbx_registerLastName
+            // panel2
             // 
-            this.tbx_registerLastName.Location = new System.Drawing.Point(149, 217);
-            this.tbx_registerLastName.Name = "tbx_registerLastName";
-            this.tbx_registerLastName.Size = new System.Drawing.Size(198, 20);
-            this.tbx_registerLastName.TabIndex = 3;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(207)))), ((int)(((byte)(0)))));
+            this.panel2.Controls.Add(this.lblPassword);
+            this.panel2.Controls.Add(this.lblLogin);
+            this.panel2.Controls.Add(this.lblLastName);
+            this.panel2.Controls.Add(this.lblFirstName);
+            this.panel2.Location = new System.Drawing.Point(-1, 107);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(110, 259);
+            this.panel2.TabIndex = 1;
             // 
-            // tbx_registerLogin
+            // lblPassword
             // 
-            this.tbx_registerLogin.Location = new System.Drawing.Point(149, 262);
-            this.tbx_registerLogin.Name = "tbx_registerLogin";
-            this.tbx_registerLogin.Size = new System.Drawing.Size(198, 20);
-            this.tbx_registerLogin.TabIndex = 4;
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Location = new System.Drawing.Point(6, 152);
+            this.lblPassword.Margin = new System.Windows.Forms.Padding(10, 10, 6, 12);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(98, 18);
+            this.lblPassword.TabIndex = 6;
+            this.lblPassword.Text = "Mot de passe";
             // 
-            // tbx_registerPassword
+            // lblLogin
             // 
-            this.tbx_registerPassword.Location = new System.Drawing.Point(149, 307);
-            this.tbx_registerPassword.Name = "tbx_registerPassword";
-            this.tbx_registerPassword.Size = new System.Drawing.Size(198, 20);
-            this.tbx_registerPassword.TabIndex = 5;
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.Location = new System.Drawing.Point(60, 112);
+            this.lblLogin.Margin = new System.Windows.Forms.Padding(10, 10, 6, 12);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(44, 18);
+            this.lblLogin.TabIndex = 5;
+            this.lblLogin.Text = "Login";
             // 
-            // btn_createAccount
+            // lblLastName
             // 
-            this.btn_createAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_createAccount.Location = new System.Drawing.Point(226, 351);
-            this.btn_createAccount.Name = "btn_createAccount";
-            this.btn_createAccount.Size = new System.Drawing.Size(121, 34);
-            this.btn_createAccount.TabIndex = 6;
-            this.btn_createAccount.Text = "Créer un compte";
-            this.btn_createAccount.UseVisualStyleBackColor = true;
-            this.btn_createAccount.Click += new System.EventHandler(this.btn_createAccount_Click);
+            this.lblLastName.AutoSize = true;
+            this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastName.Location = new System.Drawing.Point(63, 72);
+            this.lblLastName.Margin = new System.Windows.Forms.Padding(10, 10, 6, 12);
+            this.lblLastName.Name = "lblLastName";
+            this.lblLastName.Size = new System.Drawing.Size(41, 18);
+            this.lblLastName.TabIndex = 4;
+            this.lblLastName.Text = "Nom";
+            // 
+            // lblFirstName
+            // 
+            this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstName.Location = new System.Drawing.Point(43, 32);
+            this.lblFirstName.Margin = new System.Windows.Forms.Padding(10, 10, 6, 12);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(61, 18);
+            this.lblFirstName.TabIndex = 3;
+            this.lblFirstName.Text = "Prénom";
+            // 
+            // tbxFirstName
+            // 
+            this.tbxFirstName.Location = new System.Drawing.Point(129, 140);
+            this.tbxFirstName.Name = "tbxFirstName";
+            this.tbxFirstName.Size = new System.Drawing.Size(159, 20);
+            this.tbxFirstName.TabIndex = 3;
+            // 
+            // tbxLastName
+            // 
+            this.tbxLastName.Location = new System.Drawing.Point(129, 180);
+            this.tbxLastName.Name = "tbxLastName";
+            this.tbxLastName.Size = new System.Drawing.Size(159, 20);
+            this.tbxLastName.TabIndex = 4;
+            // 
+            // tbxLogin
+            // 
+            this.tbxLogin.Location = new System.Drawing.Point(129, 220);
+            this.tbxLogin.Name = "tbxLogin";
+            this.tbxLogin.Size = new System.Drawing.Size(159, 20);
+            this.tbxLogin.TabIndex = 5;
+            // 
+            // tbxPassword
+            // 
+            this.tbxPassword.Location = new System.Drawing.Point(129, 260);
+            this.tbxPassword.Name = "tbxPassword";
+            this.tbxPassword.Size = new System.Drawing.Size(159, 20);
+            this.tbxPassword.TabIndex = 6;
+            this.tbxPassword.UseSystemPasswordChar = true;
+            // 
+            // btnCreateUser
+            // 
+            this.btnCreateUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateUser.Location = new System.Drawing.Point(192, 312);
+            this.btnCreateUser.Margin = new System.Windows.Forms.Padding(10);
+            this.btnCreateUser.Name = "btnCreateUser";
+            this.btnCreateUser.Size = new System.Drawing.Size(126, 30);
+            this.btnCreateUser.TabIndex = 7;
+            this.btnCreateUser.Text = "Créer un compte";
+            this.btnCreateUser.UseVisualStyleBackColor = true;
+            this.btnCreateUser.Click += new System.EventHandler(this.btnCreateUser_Click);
             // 
             // RegisterView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 410);
-            this.Controls.Add(this.btn_createAccount);
-            this.Controls.Add(this.tbx_registerPassword);
-            this.Controls.Add(this.tbx_registerLogin);
-            this.Controls.Add(this.tbx_registerLastName);
-            this.Controls.Add(this.tbx_registerFirstName);
+            this.ClientSize = new System.Drawing.Size(337, 361);
+            this.Controls.Add(this.btnCreateUser);
+            this.Controls.Add(this.tbxPassword);
+            this.Controls.Add(this.tbxLogin);
+            this.Controls.Add(this.tbxLastName);
+            this.Controls.Add(this.tbxFirstName);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnl_BackgroundDesign1);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "RegisterView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Création d\'un compte";
-            this.Load += new System.EventHandler(this.registerView_Load);
-            this.pnl_BackgroundDesign1.ResumeLayout(false);
-            this.pnl_BackgroundDesign1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnl_BackgroundDesign1;
+        private System.Windows.Forms.PictureBox pbxLogo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pbx_logo;
-        private System.Windows.Forms.Label lbl_title;
-        private System.Windows.Forms.Label lbl_loginPassword;
-        private System.Windows.Forms.Label lbl_loginLogin;
-        private System.Windows.Forms.Label lbl_registerLastName;
-        private System.Windows.Forms.Label lbl_registerFirstName;
-        private System.Windows.Forms.TextBox tbx_registerFirstName;
-        private System.Windows.Forms.TextBox tbx_registerLastName;
-        private System.Windows.Forms.TextBox tbx_registerLogin;
-        private System.Windows.Forms.TextBox tbx_registerPassword;
-        private System.Windows.Forms.Button btn_createAccount;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.Label lblLogin;
+        private System.Windows.Forms.Label lblLastName;
+        private System.Windows.Forms.Label lblFirstName;
+        private System.Windows.Forms.TextBox tbxFirstName;
+        private System.Windows.Forms.TextBox tbxLastName;
+        private System.Windows.Forms.TextBox tbxLogin;
+        private System.Windows.Forms.TextBox tbxPassword;
+        private System.Windows.Forms.Button btnCreateUser;
     }
 }

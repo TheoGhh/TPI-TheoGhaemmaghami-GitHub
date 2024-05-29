@@ -1,9 +1,4 @@
-﻿/// ETML
-/// Auteur : Théo Ghaemmaghami
-/// Date : 16.05.2024
-/// Description : Objet Utilisateur
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,12 +9,19 @@ namespace MyTaskManager.Models
     public class User
     {
         // Attributs
+        private int _id;
         private string _firstName;
         private string _lastName;
         private string _login;
         private string _password;
 
         // Paramètres
+        public int Id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+
         public string FirstName
         {
             get { return _firstName; }
@@ -29,7 +31,7 @@ namespace MyTaskManager.Models
         public string LastName
         {
             get { return _lastName; }
-            set { _lastName = value; }            
+            set { _lastName = value; }
         }
 
         public string Login
@@ -46,11 +48,11 @@ namespace MyTaskManager.Models
 
         // Constructeur
         public User(string firstName, string lastName, string login, string password)
-        { 
-            _firstName = firstName;
-            _lastName = lastName;
-            _login = login;
-            _password = password;
+        {
+            this._firstName = firstName;
+            this._lastName = lastName;
+            this._login = login;
+            this._password = password;
         }
     }
 }

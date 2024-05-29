@@ -4,8 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MyTaskManager.Views;
-using MyTaskManager.Models;
 using MyTaskManager.Controllers;
+using MyTaskManager.Models;
 
 namespace MyTaskManager
 {
@@ -19,14 +19,19 @@ namespace MyTaskManager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            
 
-            UserModel aUserModel = new UserModel();
+            UserModel userModel = new UserModel();
+            UserController userController = new UserController(userModel);
 
-            LoginView aLoginView = new LoginView();
+            MyTaskModel myTaskModel = new MyTaskModel();
+            MyTaskController myTaskController = new MyTaskController(myTaskModel);
 
-            UserController aUserController = new UserController(aUserModel, aLoginView);
+            LoginView loginView = new LoginView(userController, myTaskController);
 
-            Application.Run(aLoginView);
+            loginView.Show();
+
+            Application.Run();
         }
     }
 }

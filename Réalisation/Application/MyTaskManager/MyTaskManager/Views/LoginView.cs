@@ -13,32 +13,36 @@ namespace MyTaskManager.Views
 {
     public partial class LoginView : Form
     {
-        public UserController Controller { get; set; }
+        public UserController UserController { get; set; }
+        public MyTaskController MyTaskController { get; set; }
 
-
-        public LoginView()
+        public LoginView(UserController userController, MyTaskController myTaskController)
         {
             InitializeComponent();
+            UserController = userController;
+            MyTaskController = myTaskController;
         }
 
-        private void loginView_Load(object sender, EventArgs e)
+        private void btnLoginUser_Click(object sender, EventArgs e)
         {
             
+            if (UserController.LoginUser(tbxLogin.Text, tbxPassword.Text) != null)
+            {
+                int? idCurrentUser = UserController.LoginUser(tbxLogin.Text, tbxPassword.Text);
+                MessageBox.Show("Vous êtes connecté !", "Connexion de compte");
+                MainView mainView = new MainView(idCurrentUser, UserController, MyTaskController);
+                mainView.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Echec de la tentative de connexion...", "Création de compte");
+            }
         }
 
-        private void btn_loginAccount_Click(object sender, EventArgs e)
+        private void btnToCreateUser_Click(object sender, EventArgs e)
         {
-            
-            MainView mainView = new MainView();
-            mainView.UserController = Controller;
-            mainView.ShowDialog();
-            this.Hide();
-        }
-
-        private void btnRegisterAccount_Click(object sender, EventArgs e)
-        {
-            RegisterView registerView = new RegisterView();
-            registerView.Controller = Controller;
+            RegisterView registerView = new RegisterView(UserController);
             registerView.ShowDialog();
         }
     }

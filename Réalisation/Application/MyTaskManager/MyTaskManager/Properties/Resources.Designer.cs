@@ -63,16 +63,6 @@ namespace MyTaskManager.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cross_delete {
-            get {
-                object obj = ResourceManager.GetObject("cross_delete", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap image_icon {
             get {
                 object obj = ResourceManager.GetObject("image_icon", resourceCulture);
@@ -85,17 +75,7 @@ namespace MyTaskManager.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap TPI___MyTaskManager___Logo {
             get {
-                object obj = ResourceManager.GetObject("TPI - MyTaskManager - Logo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap trash {
-            get {
-                object obj = ResourceManager.GetObject("trash", resourceCulture);
+                object obj = ResourceManager.GetObject("TPI___MyTaskManager___Logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

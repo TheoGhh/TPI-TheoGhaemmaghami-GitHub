@@ -5,69 +5,114 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using MyTaskManager.Models;
 
 namespace MyTaskManager.Views
 {
     public class Column : Panel
     {
+        public int ColumnIndex { get; set; }
+        public Label ColumnTitle { get; set; }
+
+        public Column(int columnIndex)
+        {
+            ColumnIndex = columnIndex;
+            InitializeColumn();
+        }
+
+        private void InitializeColumn()
+        {
+            this.Width = 200;
+            this.Dock = DockStyle.Left;
+            this.BorderStyle = BorderStyle.FixedSingle;
+
+            ColumnTitle = new Label();
+            ColumnTitle.Text = "Colonne " + ColumnIndex;
+            ColumnTitle.Dock = DockStyle.Top;
+            ColumnTitle.Height = 30;
+            ColumnTitle.TextAlign = ContentAlignment.MiddleCenter;
+            ColumnTitle.Font = new Font("Arial", 12, FontStyle.Bold);
+            
+            this.Controls.Add(ColumnTitle);
+        }
+
+        public void AddTask(MyTask task)
+        {
+            this.Controls.Add(task);
+        }
+
+        public void ClearTasks()
+        {
+            var controlsToRemove = this.Controls.OfType<MyTask>().ToList();
+            foreach (var control in controlsToRemove)
+            {
+                this.Controls.Remove(control);
+            }
+        }
+
+    }
+
+    public class lol : Panel
+    {
         private Label _lblTitle;
         private TextBox _tbxEditTitle;
 
 
-        public Column(string strTitle, Panel pnlMainContainer)
+        public lol(string strTitle, Panel pnlMainContainer)
         {
-            const int INT_WIDTH_CONTAINER = 170;
-            const int INT_HEIGHT_CONTAINER = 590;
+
+
             const int INT_SPACING = 10;
 
 
-            int panelIndex = pnlMainContainer.Controls.Count + 1;
+            
 
-            Panel pnlContainer = new Panel();
-            pnlContainer.Name = "pnlContainer" + panelIndex;
-            pnlContainer.Size = new Size(INT_WIDTH_CONTAINER, INT_HEIGHT_CONTAINER);
+            Panel pnlColumnContainer = new Panel();
+            pnlColumnContainer.Size = new Size(pnlMainContainer.Width/4, pnlMainContainer.Height-10);
             //pnlContainer.Location = new Point(0, 0);
-            pnlContainer.Location = new Point(pnlMainContainer.Controls.Count * (INT_WIDTH_CONTAINER + INT_SPACING), 0);
-            pnlContainer.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom;
-            pnlMainContainer.Controls.Add(pnlContainer);
+            pnlColumnContainer.BorderStyle = BorderStyle.FixedSingle;
+            pnlColumnContainer.Location = new Point(pnlMainContainer.Controls.Count * (pnlColumnContainer.Width + INT_SPACING), 0);
+            pnlColumnContainer.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom;
+            pnlMainContainer.Controls.Add(pnlColumnContainer);
 
             _lblTitle = new Label();
             _lblTitle.Text = strTitle;
             _lblTitle.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
-            _lblTitle.AutoSize = true;
+            _lblTitle.Size = new Size(pnlColumnContainer.Width, 20);
+            _lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             _lblTitle.Location = new Point(0, 0);
-            pnlContainer.Controls.Add(_lblTitle);
+            pnlColumnContainer.Controls.Add(_lblTitle);
 
             _lblTitle.MouseEnter += LblTitle_MouseEnter;
             _lblTitle.MouseLeave += LblTitle_MouseLeave;
-            _lblTitle.Click += LblTitle_Click;  
+            _lblTitle.Click += LblTitle_Click;
 
-            Panel pnlColumn = new Panel();
-            pnlColumn.Size = new Size(INT_WIDTH_CONTAINER, INT_HEIGHT_CONTAINER - _lblTitle.Height);
-            pnlColumn.Location = new Point(0, _lblTitle.Bottom);
-            pnlColumn.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            pnlColumn.BorderStyle = BorderStyle.FixedSingle;
-            pnlColumn.AutoScroll = true;
-            pnlColumn.AllowDrop = true;
-            pnlContainer.Controls.Add(pnlColumn);
+            FlowLayoutPanel flpnlColumn = new FlowLayoutPanel();
+            flpnlColumn.Size = new Size(pnlColumnContainer.Width, pnlColumnContainer.Height - _lblTitle.Height);
+            flpnlColumn.Location = new Point(0, _lblTitle.Bottom);
+            flpnlColumn.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom;
+            flpnlColumn.BorderStyle = BorderStyle.FixedSingle;
+            flpnlColumn.AutoScroll = true;
+            flpnlColumn.AllowDrop = true;
+            pnlColumnContainer.Controls.Add(flpnlColumn);
 
             _tbxEditTitle = new TextBox();
-            _tbxEditTitle.Size = new Size(pnlColumn.Width, _lblTitle.Height);
+            _tbxEditTitle.Size = new Size(flpnlColumn.Width, _lblTitle.Height);
             _tbxEditTitle.Location = _lblTitle.Location;
             _tbxEditTitle.Font = _lblTitle.Font;
-            _tbxEditTitle.MaxLength = 15;
+            _tbxEditTitle.MaxLength = 12;
             _tbxEditTitle.Text = _lblTitle.Text;
             _tbxEditTitle.BorderStyle = BorderStyle.None;
             _tbxEditTitle.BackColor = SystemColors.Control;
             _tbxEditTitle.Hide();
-            pnlContainer.Controls.Add(_tbxEditTitle);
+            pnlColumnContainer.Controls.Add(_tbxEditTitle);
 
             _tbxEditTitle.LostFocus += TbxEditTitle_LostFocus;
             _tbxEditTitle.KeyPress += TbxEditTitle_KeyPress;
 
         }
 
- 
+
 
         /// <summary>
         /// Lorsque l'utilisateur passe le curseur sur un titre, le titre change de couleur
@@ -117,8 +162,8 @@ namespace MyTaskManager.Views
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void TbxEditTitle_LostFocus(object sender, EventArgs e)
-        {   
-            UpdateLabel();      
+        {
+            UpdateLabel();
         }
 
         /// <summary>
@@ -133,7 +178,5 @@ namespace MyTaskManager.Views
                 UpdateLabel();
             }
         }
-
-        
     }
 }

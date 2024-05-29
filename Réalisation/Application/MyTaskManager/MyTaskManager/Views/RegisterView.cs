@@ -1,9 +1,4 @@
-﻿/// ETML
-/// Auteur : Théo Ghaemmaghami
-/// Date : 16.05.2024
-/// Description : Vue (interface utilisateur) du formulaire de création d'un compte
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,31 +13,27 @@ namespace MyTaskManager.Views
 {
     public partial class RegisterView : Form
     {
-        public UserController Controller { get; set; }
+        public UserController UserController { get; set; }
 
-        public RegisterView()
+        public RegisterView(UserController userController)
         {
             InitializeComponent();
+            UserController = userController;
         }
 
-        private void registerView_Load(object sender, EventArgs e)
+        private void btnCreateUser_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btn_createAccount_Click(object sender, EventArgs e)
-        {
-            bool isRegistered = Controller.RegisterNewUser(tbx_registerFirstName.Text, tbx_registerLastName.Text, tbx_registerLogin.Text, tbx_registerPassword.Text);
-            if (isRegistered)
+            if(UserController.RegisterUser(tbxFirstName.Text, tbxLastName.Text, tbxLogin.Text, tbxPassword.Text))
             {
-                MessageBox.Show("Compte utilisateur créé !", "Création de compte");
+                MessageBox.Show("Nouveau compte utilisateur crée avec succès !", "Création d'un compte");
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Erreur lors de la création du compte", "Création d'un compte");
+                MessageBox.Show("Echec de la tentative de création d'un compte !", "Création de compte");
             }
-                   
+            
+            
         }
     }
 }

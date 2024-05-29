@@ -5,32 +5,48 @@ using System.Text;
 using System.Threading.Tasks;
 using MyTaskManager.Models;
 using MyTaskManager.Views;
-using System.Drawing;
+using System.Windows.Forms;
 
 namespace MyTaskManager.Controllers
 {
     public class MyTaskController
     {
-        private AddTaskView _addTaskView;
-        
         private MyTaskModel _model;
 
-        public MyTaskController(AddTaskView addTaskView, MyTaskModel myTaskModel)
+        public MyTaskController(MyTaskModel model)
         {
-            _addTaskView = addTaskView;
-            _addTaskView.Controller = this;
-
-            _model = myTaskModel;
-            _model.Controller = this;
+            _model = model;
+            _model.MyTaskController = this;
         }
 
-        public bool AddTask(string title, string description, DateTime endDate, int priority, string url, Image image)
+        public bool AddTask(string title, string text, DateTime endDate, int priority, string url, byte[] img,int? fkUser)
         {
-            MyTask newTask = new MyTask(title, description, endDate, priority, url, image);
+            DateTime creationDate = DateTime.Now.Date;
 
-            return _model.AddNewTaskInDatabase(newTask);
-            
+            MyTask newTask = new MyTask(title, text, creationDate, endDate, priority, url, img, fkUser);
+
+            try
+            {
+                return _model.AddTaskToDatabase(newTask);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }            
         }
 
+        public List<MyTask> GetAllTasks(int? currentUserId)
+        {
+            try
+            {
+                return _model.GetTasksFromDatabase(currentUserId);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
     }
 }

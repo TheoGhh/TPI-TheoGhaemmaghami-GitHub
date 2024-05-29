@@ -1,95 +1,144 @@
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\MyTaskManager.exe.config
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\MyTaskManager.exe
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\MyTaskManager.pdb
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.AssemblyReference.cache
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.SuggestedBindingRedirects.cache
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Properties.Resources.resources
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.GenerateResource.cache
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.CoreCompileInputs.cache
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.exe
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.pdb
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Views.registerView.resources
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\BCrypt.Net-Next.dll
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\BouncyCastle.Cryptography.dll
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\Google.Protobuf.dll
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Compression.LZ4.dll
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Compression.LZ4.Streams.dll
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Hash.xxHash.dll
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\MySql.Data.dll
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Buffers.dll
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Configuration.ConfigurationManager.dll
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Diagnostics.DiagnosticSource.dll
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.IO.Pipelines.dll
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Memory.dll
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\ZstdSharp.dll
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\BCrypt.Net-Next.xml
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\BouncyCastle.Cryptography.xml
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\Google.Protobuf.pdb
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\Google.Protobuf.xml
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Compression.LZ4.xml
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Compression.LZ4.Streams.xml
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Hash.xxHash.xml
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\MySql.Data.xml
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Buffers.xml
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.IO.Pipelines.xml
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Memory.xml
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Numerics.Vectors.xml
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.CopyComplete
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Views.MainView.resources
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\MyTaskManager.exe.config
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\MyTaskManager.exe
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\MyTaskManager.pdb
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\BCrypt.Net-Next.dll
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\BouncyCastle.Cryptography.dll
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\Google.Protobuf.dll
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Compression.LZ4.dll
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Compression.LZ4.Streams.dll
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Hash.xxHash.dll
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\MySql.Data.dll
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Buffers.dll
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Configuration.ConfigurationManager.dll
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Diagnostics.DiagnosticSource.dll
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.IO.Pipelines.dll
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Memory.dll
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Numerics.Vectors.dll
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Threading.Tasks.Extensions.dll
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\ZstdSharp.dll
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\BCrypt.Net-Next.xml
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\BouncyCastle.Cryptography.xml
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\Google.Protobuf.pdb
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\Google.Protobuf.xml
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Compression.LZ4.xml
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Compression.LZ4.Streams.xml
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Hash.xxHash.xml
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\MySql.Data.xml
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Buffers.xml
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.IO.Pipelines.xml
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Memory.xml
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Numerics.Vectors.xml
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\bin\Debug\System.Threading.Tasks.Extensions.xml
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.AssemblyReference.cache
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.SuggestedBindingRedirects.cache
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.LoginView.resources
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Properties.Resources.resources
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Views.MainView.resources
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Views.RegisterView.resources
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.GenerateResource.cache
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.CoreCompileInputs.cache
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.CopyComplete
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.exe
-H:\TPI - Backup SSD\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.pdb
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Views.AddTaskView.resources
-C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Views.LoginView.resources
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\MyTaskManager.exe.config
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\MyTaskManager.exe
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\MyTaskManager.pdb
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\BCrypt.Net-Next.dll
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\BouncyCastle.Cryptography.dll
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\Google.Protobuf.dll
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Compression.LZ4.dll
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Hash.xxHash.dll
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\MySql.Data.dll
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Buffers.dll
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.IO.Pipelines.dll
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Memory.dll
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Numerics.Vectors.dll
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\ZstdSharp.dll
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\BCrypt.Net-Next.xml
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\BouncyCastle.Cryptography.xml
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\Google.Protobuf.pdb
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\Google.Protobuf.xml
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Compression.LZ4.xml
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Hash.xxHash.xml
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\MySql.Data.xml
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Buffers.xml
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.IO.Pipelines.xml
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Memory.xml
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Numerics.Vectors.xml
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.AssemblyReference.cache
+D:\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.SuggestedBindingRedirects.cache
+D:\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Properties.Resources.resources
+D:\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Views.LoginView.resources
+D:\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Views.MainView.resources
+D:\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Views.RegisterView.resources
+D:\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.GenerateResource.cache
+D:\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.CoreCompileInputs.cache
+D:\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.CopyComplete
+D:\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.exe
+D:\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.pdb
+D:\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Views.AddTaskView.resources
+F:\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.AssemblyReference.cache
+F:\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.SuggestedBindingRedirects.cache
+F:\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Properties.Resources.resources
+F:\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Views.AddTaskView.resources
+F:\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Views.LoginView.resources
+F:\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Views.MainView.resources
+F:\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Views.RegisterView.resources
+F:\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.GenerateResource.cache
+F:\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.CoreCompileInputs.cache
+F:\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.exe
+F:\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.pdb
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\MyTaskManager.exe.config
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\MyTaskManager.exe
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\MyTaskManager.pdb
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\BCrypt.Net-Next.dll
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\BouncyCastle.Cryptography.dll
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\Google.Protobuf.dll
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Compression.LZ4.dll
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Compression.LZ4.Streams.dll
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Hash.xxHash.dll
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\MySql.Data.dll
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Buffers.dll
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Configuration.ConfigurationManager.dll
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.IO.Pipelines.dll
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Memory.dll
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Numerics.Vectors.dll
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Threading.Tasks.Extensions.dll
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\ZstdSharp.dll
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\BCrypt.Net-Next.xml
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\BouncyCastle.Cryptography.xml
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\Google.Protobuf.pdb
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\Google.Protobuf.xml
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Compression.LZ4.xml
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Compression.LZ4.Streams.xml
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Hash.xxHash.xml
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\MySql.Data.xml
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Buffers.xml
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.IO.Pipelines.xml
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Memory.xml
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Numerics.Vectors.xml
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+F:\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Threading.Tasks.Extensions.xml
+F:\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.CopyComplete
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\MyTaskManager.exe.config
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\MyTaskManager.exe
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\MyTaskManager.pdb
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\BCrypt.Net-Next.dll
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\BouncyCastle.Cryptography.dll
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\Google.Protobuf.dll
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Compression.LZ4.dll
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Compression.LZ4.Streams.dll
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Hash.xxHash.dll
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\MySql.Data.dll
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Buffers.dll
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Configuration.ConfigurationManager.dll
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.IO.Pipelines.dll
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Memory.dll
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Numerics.Vectors.dll
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Threading.Tasks.Extensions.dll
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\ZstdSharp.dll
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\BCrypt.Net-Next.xml
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\BouncyCastle.Cryptography.xml
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\Google.Protobuf.pdb
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\Google.Protobuf.xml
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Compression.LZ4.xml
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Compression.LZ4.Streams.xml
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\K4os.Hash.xxHash.xml
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\MySql.Data.xml
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Buffers.xml
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.IO.Pipelines.xml
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Memory.xml
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Numerics.Vectors.xml
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Threading.Tasks.Extensions.xml
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.AssemblyReference.cache
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.SuggestedBindingRedirects.cache
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Properties.Resources.resources
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Views.AddTaskView.resources
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Views.LoginView.resources
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Views.MainView.resources
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.Views.RegisterView.resources
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.GenerateResource.cache
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.CoreCompileInputs.cache
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.CopyComplete
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.exe
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.pdb
