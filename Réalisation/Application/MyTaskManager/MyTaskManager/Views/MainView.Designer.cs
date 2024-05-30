@@ -28,31 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnDeleteColumn = new System.Windows.Forms.Button();
             this.btnAddColumn = new System.Windows.Forms.Button();
             this.lblPersonalization = new System.Windows.Forms.Label();
             this.btnAddTask = new System.Windows.Forms.Button();
             this.pbxLogo = new System.Windows.Forms.PictureBox();
             this.pnlMainContainer = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlMenu
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pnlMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(207)))), ((int)(((byte)(0)))));
-            this.panel1.Controls.Add(this.btnDeleteColumn);
-            this.panel1.Controls.Add(this.btnAddColumn);
-            this.panel1.Controls.Add(this.lblPersonalization);
-            this.panel1.Controls.Add(this.btnAddTask);
-            this.panel1.Controls.Add(this.pbxLogo);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(159, 550);
-            this.panel1.TabIndex = 4;
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(207)))), ((int)(((byte)(0)))));
+            this.pnlMenu.Controls.Add(this.btnDeleteColumn);
+            this.pnlMenu.Controls.Add(this.btnAddColumn);
+            this.pnlMenu.Controls.Add(this.lblPersonalization);
+            this.pnlMenu.Controls.Add(this.btnAddTask);
+            this.pnlMenu.Controls.Add(this.pbxLogo);
+            this.pnlMenu.Location = new System.Drawing.Point(0, 0);
+            this.pnlMenu.Name = "pnlMenu";
+            this.pnlMenu.Size = new System.Drawing.Size(159, 550);
+            this.pnlMenu.TabIndex = 4;
             // 
             // btnDeleteColumn
             // 
@@ -112,6 +112,8 @@
             // 
             // pnlMainContainer
             // 
+            this.pnlMainContainer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlMainContainer.AutoScroll = true;
             this.pnlMainContainer.Location = new System.Drawing.Point(165, 10);
             this.pnlMainContainer.Name = "pnlMainContainer";
@@ -124,12 +126,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 550);
             this.Controls.Add(this.pnlMainContainer);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlMenu);
             this.Name = "MainView";
             this.Text = "MyTaskManager";
             this.Load += new System.EventHandler(this.MainView_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlMenu.ResumeLayout(false);
+            this.pnlMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
 
@@ -137,7 +139,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.PictureBox pbxLogo;
         private System.Windows.Forms.Button btnAddTask;
         private System.Windows.Forms.Panel pnlMainContainer;

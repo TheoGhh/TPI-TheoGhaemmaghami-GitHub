@@ -17,3 +17,5 @@ https://www.base-de-donnees.com/mld/
 https://www.techno-science.net/definition/739.html
 https://ineumann.developpez.com/tutoriels/merise/initiation-merise/
 https://fr.wikipedia.org/wiki/Merise_(informatique)
+
+URL : https://stackoverflow.com/questions/58024/open-a-url-from-windows-forms

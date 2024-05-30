@@ -13,7 +13,7 @@ namespace MyTaskManager.Views
 {
     public partial class RegisterView : Form
     {
-        public UserController UserController { get; set; }
+        public UserController UserController { get; set; }  // Accès Contrôleur des utilisateurs
 
         public RegisterView(UserController userController)
         {

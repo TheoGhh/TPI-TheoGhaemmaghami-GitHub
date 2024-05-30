@@ -15,9 +15,10 @@ namespace MyTaskManager.Views
     public partial class MainView : Form
     {     
         
-        public UserController UserController { get; set; }
-        public MyTaskController MyTaskController { get; set; }
-        private int? _currentIdUser;
+        public UserController UserController { get; set; }  // Accès Contrôleur des utilisateurs
+        public MyTaskController MyTaskController { get; set; }  // Accès Contrôleur des tâches
+
+        private int? _currentIdUser;    // Stocke l'ID de l'utilisateur actuellement connecté
 
         int counter = 2;
         Column columnToDo = new Column("A FAIRE");
@@ -28,11 +29,14 @@ namespace MyTaskManager.Views
             InitializeComponent();
             UserController = userController;       
             _currentIdUser = idUser;
-            MyTaskController = myTaskController;      
+            MyTaskController = myTaskController;    
+            
+            MinimumSize = new Size(pnlMenu.Width + (counter*columnToDo.Width),pnlMenu.Height);
         }
 
         private void MainView_Load(object sender, EventArgs e)
         {
+            // Affiche les 2 colonnes par défaut
             columnToDo.DisplayColumn(pnlMainContainer);
             columnDone.DisplayColumn(pnlMainContainer);
 
@@ -44,21 +48,39 @@ namespace MyTaskManager.Views
             }
         }
 
+        /// <summary>
+        /// Ouvre la vue "Ajout d'une nouvelle tâche"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAddTask_Click(object sender, EventArgs e)
         {
             AddTaskView addTaskView = new AddTaskView(_currentIdUser, MyTaskController);
             addTaskView.Show();
+
+            // Invoque l'évenement d'ajout d'une nouvelle tâche
             addTaskView.TaskAdded += AddTaskView_TaskAdded;
         }
 
+        /// <summary>
+        /// Affiche la dernière tâche venant d'être ajoutée 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddTaskView_TaskAdded(object sender, EventArgs e)
         {
             var tasks = MyTaskController.GetAllTasks(_currentIdUser);
             columnToDo.AddTask(tasks.Last());
         }
 
+        /// <summary>
+        /// Permet d'ajouter une nouvelle colonne
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAddColumn_Click(object sender, EventArgs e)
         {
+            // Contrôle la limite maximum de colonnes
             if (pnlMainContainer.Controls.Count < 6)
             {
                 Column newColumn = new Column("Titre");
@@ -72,11 +94,17 @@ namespace MyTaskManager.Views
             
         }
 
+        /// <summary>
+        /// Permet de supprimer une colonne     ////////////      !!  BUG !!
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDeleteColumn_Click(object sender, EventArgs e)
         {
             if (pnlMainContainer.Controls.Count > 2)
             {
                 pnlMainContainer.Controls.RemoveAt(counter-1);
+                counter--;
             }
             else
             {

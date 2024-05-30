@@ -13,7 +13,7 @@ namespace MyTaskManager.Views
 {
     public partial class LoginView : Form
     {
-        public UserController UserController { get; set; }
+        public UserController UserController { get; set; }  // Accès Contrôleur des utilisateurs
         public MyTaskController MyTaskController { get; set; }
 
         public LoginView(UserController userController, MyTaskController myTaskController)

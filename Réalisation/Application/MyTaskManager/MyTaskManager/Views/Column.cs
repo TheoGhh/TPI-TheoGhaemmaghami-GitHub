@@ -9,66 +9,29 @@ using MyTaskManager.Models;
 
 namespace MyTaskManager.Views
 {
-    public class lol : Panel
-    {
-        
-        public int ColumnIndex { get; set; }
-        public Label ColumnTitle { get; set; }
-
-        public lol(int columnIndex)
-        {
-            ColumnIndex = columnIndex;
-            InitializeColumn();
-        }
-
-        private void InitializeColumn()
-        {
-            this.Width = 200;
-            this.Dock = DockStyle.Left;
-            this.BorderStyle = BorderStyle.FixedSingle;
-
-            ColumnTitle = new Label();
-            ColumnTitle.Text = "Colonne " + ColumnIndex;
-            ColumnTitle.Dock = DockStyle.Top;
-            ColumnTitle.Height = 30;
-            ColumnTitle.TextAlign = ContentAlignment.MiddleCenter;
-            ColumnTitle.Font = new Font("Arial", 12, FontStyle.Bold);
-            
-            this.Controls.Add(ColumnTitle);
-        }
-
-        public void AddTask(MyTask task)
-        {
-            this.Controls.Add(task);
-        }
-
-        public void ClearTasks()
-        {
-            var controlsToRemove = this.Controls.OfType<MyTask>().ToList();
-            foreach (var control in controlsToRemove)
-            {
-                this.Controls.Remove(control);
-            }
-        }
-
-    }
+ 
 
     public class Column : Panel
     {
         private Panel _pnlColumnContainer;
         private Label _lblTitle;
         private TextBox _tbxEditTitle;
-        private FlowLayoutPanel _flpnlColumn;
+        private FlowLayoutPanel _flpnlColumn; 
 
-        const int INT_SPACING = 10;
-        const int COLUMN_WIDTH = 150;
+        const int INT_SPACING = 10; // Espacement entre les colonnes
+        const int COLUMN_WIDTH = 150; // Largeur de la colonne
 
-        List<Column> columns = new List<Column>();
+        /// <summary>
+        /// Constructeur 
+        /// </summary>
+        /// <param name="strTitle"></param>
         public Column(string strTitle)
         {
-            _pnlColumnContainer = new Panel();
-            _pnlColumnContainer.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom;           
+            // Conteneur de la colonne (contient le titre et la colonne)
+            _pnlColumnContainer = new Panel();  
+            _pnlColumnContainer.BorderStyle = BorderStyle.FixedSingle;
 
+            // Titre de la colonne
             _lblTitle = new Label();
             _lblTitle.Text = strTitle;
             _lblTitle.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
@@ -77,21 +40,24 @@ namespace MyTaskManager.Views
             _lblTitle.Location = new Point(0, 0);
             _pnlColumnContainer.Controls.Add(_lblTitle);
 
+            // Evenements visuels et qui permettent de changer le titre de la colonne
             _lblTitle.MouseEnter += LblTitle_MouseEnter;
             _lblTitle.MouseLeave += LblTitle_MouseLeave;
             _lblTitle.Click += LblTitle_Click;
 
+            // Colonne où vont s'afficher les tâches (zone de Drag & Drop)
             _flpnlColumn = new FlowLayoutPanel();
             _flpnlColumn.Size = new Size(_pnlColumnContainer.Width, _pnlColumnContainer.Height - _lblTitle.Height);
             _flpnlColumn.Location = new Point(0, _lblTitle.Bottom);
-            _flpnlColumn.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom;
-            _flpnlColumn.BorderStyle = BorderStyle.FixedSingle;
+            _flpnlColumn.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom;      
             _flpnlColumn.AllowDrop = true;
             _flpnlColumn.FlowDirection = FlowDirection.TopDown;
             _flpnlColumn.AutoScroll = true;
             _flpnlColumn.WrapContents = false;
             _pnlColumnContainer.Controls.Add(_flpnlColumn);
+            // EVENEMENTS DRAG & DROP A AJOUTER ICI ! //
 
+            // Textbox "invisible" permettant de renommer le titre de la colonne
             _tbxEditTitle = new TextBox();
             _tbxEditTitle.Size = new Size(_flpnlColumn.Width, _lblTitle.Height);
             _tbxEditTitle.Location = _lblTitle.Location;
@@ -102,25 +68,32 @@ namespace MyTaskManager.Views
             _tbxEditTitle.BackColor = SystemColors.Control;
             _tbxEditTitle.Hide();
             _pnlColumnContainer.Controls.Add(_tbxEditTitle);
-
+         
             _tbxEditTitle.LostFocus += TbxEditTitle_LostFocus;
             _tbxEditTitle.KeyPress += TbxEditTitle_KeyPress;
             
         }
 
+        /// <summary>
+        /// Permet de placer et d'afficher la colonne dans l'interface principale
+        /// </summary>
+        /// <param name="pnlMainContainer">Conteneur pour les colonnes</param>
         public void DisplayColumn(Panel pnlMainContainer)
         {
             _pnlColumnContainer.Size = new Size(COLUMN_WIDTH, pnlMainContainer.Height - 10);
             _pnlColumnContainer.Location = new Point(pnlMainContainer.Controls.Count * (_pnlColumnContainer.Width + INT_SPACING), 0);
+            _pnlColumnContainer.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom;
             pnlMainContainer.Controls.Add(_pnlColumnContainer);
         }
 
+        /// <summary>
+        /// Permet d'ajouter une tâche à une colonne
+        /// </summary>
+        /// <param name="task"></param>
         public void AddTask(MyTask task)
         {
             _flpnlColumn.Controls.Add(task);
         }
-
-
 
         /// <summary>
         /// Lorsque l'utilisateur passe le curseur sur un titre, le titre change de couleur
