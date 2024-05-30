@@ -9,12 +9,13 @@ using MyTaskManager.Models;
 
 namespace MyTaskManager.Views
 {
-    public class Column : Panel
+    public class lol : Panel
     {
+        
         public int ColumnIndex { get; set; }
         public Label ColumnTitle { get; set; }
 
-        public Column(int columnIndex)
+        public lol(int columnIndex)
         {
             ColumnIndex = columnIndex;
             InitializeColumn();
@@ -52,52 +53,47 @@ namespace MyTaskManager.Views
 
     }
 
-    public class lol : Panel
+    public class Column : Panel
     {
+        private Panel _pnlColumnContainer;
         private Label _lblTitle;
         private TextBox _tbxEditTitle;
+        private FlowLayoutPanel _flpnlColumn;
 
+        const int INT_SPACING = 10;
+        const int COLUMN_WIDTH = 120;
 
-        public lol(string strTitle, Panel pnlMainContainer)
+        List<Column> columns = new List<Column>();
+        public Column(string strTitle)
         {
-
-
-            const int INT_SPACING = 10;
-
-
-            
-
-            Panel pnlColumnContainer = new Panel();
-            pnlColumnContainer.Size = new Size(pnlMainContainer.Width/4, pnlMainContainer.Height-10);
-            //pnlContainer.Location = new Point(0, 0);
-            pnlColumnContainer.BorderStyle = BorderStyle.FixedSingle;
-            pnlColumnContainer.Location = new Point(pnlMainContainer.Controls.Count * (pnlColumnContainer.Width + INT_SPACING), 0);
-            pnlColumnContainer.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom;
-            pnlMainContainer.Controls.Add(pnlColumnContainer);
+            _pnlColumnContainer = new Panel();
+            _pnlColumnContainer.BorderStyle = BorderStyle.FixedSingle;
+            _pnlColumnContainer.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom;           
 
             _lblTitle = new Label();
             _lblTitle.Text = strTitle;
             _lblTitle.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
-            _lblTitle.Size = new Size(pnlColumnContainer.Width, 20);
-            _lblTitle.TextAlign = ContentAlignment.MiddleCenter;
+            _lblTitle.Width = COLUMN_WIDTH;
+            _lblTitle.AutoSize = true;
             _lblTitle.Location = new Point(0, 0);
-            pnlColumnContainer.Controls.Add(_lblTitle);
+            _pnlColumnContainer.Controls.Add(_lblTitle);
 
             _lblTitle.MouseEnter += LblTitle_MouseEnter;
             _lblTitle.MouseLeave += LblTitle_MouseLeave;
             _lblTitle.Click += LblTitle_Click;
 
-            FlowLayoutPanel flpnlColumn = new FlowLayoutPanel();
-            flpnlColumn.Size = new Size(pnlColumnContainer.Width, pnlColumnContainer.Height - _lblTitle.Height);
-            flpnlColumn.Location = new Point(0, _lblTitle.Bottom);
-            flpnlColumn.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom;
-            flpnlColumn.BorderStyle = BorderStyle.FixedSingle;
-            flpnlColumn.AutoScroll = true;
-            flpnlColumn.AllowDrop = true;
-            pnlColumnContainer.Controls.Add(flpnlColumn);
+            _flpnlColumn = new FlowLayoutPanel();
+            _flpnlColumn.Size = new Size(_pnlColumnContainer.Width, _pnlColumnContainer.Height - _lblTitle.Height);
+            _flpnlColumn.Location = new Point(0, _lblTitle.Bottom);
+            _flpnlColumn.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom;
+            _flpnlColumn.BorderStyle = BorderStyle.FixedSingle;
+            _flpnlColumn.AutoScroll = true;
+            _flpnlColumn.AllowDrop = true;
+            _flpnlColumn.FlowDirection = FlowDirection.TopDown;
+            _pnlColumnContainer.Controls.Add(_flpnlColumn);
 
             _tbxEditTitle = new TextBox();
-            _tbxEditTitle.Size = new Size(flpnlColumn.Width, _lblTitle.Height);
+            _tbxEditTitle.Size = new Size(_flpnlColumn.Width, _lblTitle.Height);
             _tbxEditTitle.Location = _lblTitle.Location;
             _tbxEditTitle.Font = _lblTitle.Font;
             _tbxEditTitle.MaxLength = 12;
@@ -105,11 +101,23 @@ namespace MyTaskManager.Views
             _tbxEditTitle.BorderStyle = BorderStyle.None;
             _tbxEditTitle.BackColor = SystemColors.Control;
             _tbxEditTitle.Hide();
-            pnlColumnContainer.Controls.Add(_tbxEditTitle);
+            _pnlColumnContainer.Controls.Add(_tbxEditTitle);
 
             _tbxEditTitle.LostFocus += TbxEditTitle_LostFocus;
             _tbxEditTitle.KeyPress += TbxEditTitle_KeyPress;
+            
+        }
 
+        public void DisplayColumn(Panel pnlMainContainer)
+        {
+            _pnlColumnContainer.Size = new Size(COLUMN_WIDTH, pnlMainContainer.Height - 10);
+            _pnlColumnContainer.Location = new Point(pnlMainContainer.Controls.Count * (_pnlColumnContainer.Width + INT_SPACING), 0);
+            pnlMainContainer.Controls.Add(_pnlColumnContainer);
+        }
+
+        public void AddTask(MyTask task)
+        {
+            _flpnlColumn.Controls.Add(task);
         }
 
 

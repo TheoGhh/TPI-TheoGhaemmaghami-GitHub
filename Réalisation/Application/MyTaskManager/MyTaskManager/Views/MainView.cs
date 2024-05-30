@@ -22,6 +22,8 @@ namespace MyTaskManager.Views
         private const int MinColumns = 2;
         private const int MaxColumns = 6;
         private List<Column> columns = new List<Column>();
+        Column columnToDo = new Column("A FAIRE");
+        Column columnDone = new Column("TERMINE");
 
         public MainView(int? idUser, UserController userController, MyTaskController myTaskController)
         {
@@ -33,7 +35,8 @@ namespace MyTaskManager.Views
 
         private void MainView_Load(object sender, EventArgs e)
         {
-            
+            columnToDo.DisplayColumn(pnlMainContainer);
+            columnDone.DisplayColumn(pnlMainContainer);
             DisplayTasks();
         }
 
@@ -52,29 +55,13 @@ namespace MyTaskManager.Views
 
         private void DisplayTasks()
         {
-            
-
             var tasks = MyTaskController.GetAllTasks(_currentIdUser);
             foreach (var task in tasks)
             {
-                flowLayoutPanel1.Controls.Add(task); 
+                columnToDo.AddTask(task);
             }
         }
 
-        private void DisplayColumns()
-        {
-            int counter = 0;
-            counter++;
-
-            Label lblTitle= new Label();
-            lblTitle.Name = counter.ToString();
-
-
-            FlowLayoutPanel flowLayoutPanel1 = new FlowLayoutPanel();
-            flowLayoutPanel1.Name = counter.ToString();
-            flowLayoutPanel1.
-
-        }
 
         private void btnAddColumn_Click(object sender, EventArgs e)
         {
