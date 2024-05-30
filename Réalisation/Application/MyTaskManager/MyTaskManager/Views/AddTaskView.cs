@@ -27,6 +27,7 @@ namespace MyTaskManager.Views
             InitializeComponent();
             _idCurrentUser = idUser;
             MyTaskController = myTaskController;
+            datEndDate.MinDate = DateTime.Today;
         }
 
         private void btnAddTask_Click(object sender, EventArgs e)

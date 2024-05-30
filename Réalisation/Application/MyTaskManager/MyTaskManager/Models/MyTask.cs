@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 using System.IO;
+using System.Diagnostics;
 
 namespace MyTaskManager.Models
 {
@@ -19,7 +20,7 @@ namespace MyTaskManager.Models
         private int _priority;
         private string _url;
         private byte[] _image;
-        private readonly int? _fkUser; 
+        private readonly int? _fkUser;
 
         // Paramètres
         public string Title
@@ -85,7 +86,8 @@ namespace MyTaskManager.Models
 
         public void DisplayTask()
         {
-            const int INT_SIZE = 80;
+            const int INT_SIZE = 135;
+            int counter = 0;
 
             this.Size = new Size(INT_SIZE, INT_SIZE);
             this.BackColor = Color.FromArgb(255, 207, 0);
@@ -104,37 +106,55 @@ namespace MyTaskManager.Models
             lblTitle.TextAlign = ContentAlignment.MiddleLeft;
             pnlTitle.Controls.Add(lblTitle);
 
-            Label lblText = new Label();
-            lblText.Text = Text;
-            lblText.Font = new Font("Arial", 9);
-            lblText.AutoSize = true;
-            lblText.Location = new Point(-1, pnlTitle.Bottom + 5);
-            lblText.MaximumSize = new Size(INT_SIZE, INT_SIZE * 75 / 100);
-            this.Controls.Add(lblText);
+            if (Text != "")
+            {
+                Label lblText = new Label();
+                lblText.Text = Text;
+                lblText.Font = new Font("Arial", 9);
+                lblText.AutoSize = true;
+                lblText.Location = new Point(-1, pnlTitle.Bottom + 5);
+                lblText.MaximumSize = new Size(INT_SIZE, INT_SIZE * 75 / 100);
+                this.Controls.Add(lblText);
+                counter++;
+            }
 
-            Label lblCreationDate = new Label();
-            lblCreationDate.Text = "Date de création : " + CreationDate.Date.ToShortDateString();
-            lblCreationDate.Font = new Font("Arial", 9);
-            lblCreationDate.AutoSize = true;
-            lblCreationDate.Location = new Point(-1, lblText.Bottom + 5);
-            lblCreationDate.MaximumSize = new Size(INT_SIZE, INT_SIZE * 75 / 100);
-            this.Controls.Add(lblCreationDate);
-
-            Label lblEndDate = new Label();
-            lblEndDate.Text = "Deadline : " + CreationDate.Date.ToShortDateString();
-            lblEndDate.Font = new Font("Arial", 9);
-            lblEndDate.AutoSize = true;
-            lblEndDate.Location = new Point(-1, lblCreationDate.Bottom + 5);
-            lblEndDate.MaximumSize = new Size(INT_SIZE, INT_SIZE * 75 / 100);
-            this.Controls.Add(lblEndDate);
+            if (EndDate >= DateTime.Today)
+            {
+                Label lblEndDate = new Label();
+                lblEndDate.Text = "Deadline : " + CreationDate.Date.ToShortDateString();
+                lblEndDate.Font = new Font("Arial", 9);
+                lblEndDate.AutoSize = true;
+                lblEndDate.Location = new Point(-1, counter * 5);
+                lblEndDate.MaximumSize = new Size(INT_SIZE, INT_SIZE * 75 / 100);
+                this.Controls.Add(lblEndDate);
+                counter++;
+            }
+            
 
             Label lblPriority = new Label();
             lblPriority.Text = "Priorité : " + Priority.ToString();
             lblPriority.Font = new Font("Arial", 9);
             lblPriority.AutoSize = true;
-            lblPriority.Location = new Point(-1, lblEndDate.Bottom + 5);
+            //lblPriority.Location = new Point(-1, lblEndDate.Bottom + 5);
             lblPriority.MaximumSize = new Size(INT_SIZE, INT_SIZE * 75 / 100);
             this.Controls.Add(lblPriority);
+
+            if (!string.IsNullOrEmpty(Url))
+            {
+                Label lblUrl = new Label();
+                lblUrl.Text = "Lien URL";
+                lblUrl.ForeColor = Color.DarkBlue;
+                lblUrl.Font = new Font("Arial", 9, FontStyle.Underline);
+                lblUrl.AutoSize = true;
+                lblUrl.Location = new Point(-1, lblPriority.Bottom + 5);
+                lblUrl.MaximumSize = new Size(INT_SIZE, INT_SIZE * 75 / 100);
+
+                lblUrl.Click += LblUrl_Click;
+
+                this.Controls.Add(lblUrl);
+            }
+
+            
 
             /*if (_image != null && _image.Length > 0)
             {
@@ -146,12 +166,18 @@ namespace MyTaskManager.Models
                 this.Controls.Add(pbxImage);
             }*/
         }
-        /*private Image ByteArrayToImage(byte[] byteArray)
+
+        private void LblUrl_Click(object sender, EventArgs e)
         {
-            using (MemoryStream ms = new MemoryStream(byteArray))
-            {
-                return Image.FromS;
-            }
-        }*/
+            Process.Start(Url);
+            
+        }
+        /*private Image ByteArrayToImage(byte[] byteArray)
+{
+   using (MemoryStream ms = new MemoryStream(byteArray))
+   {
+       return Image.FromS;
+   }
+}*/
     }
 }

@@ -19,9 +19,7 @@ namespace MyTaskManager.Views
         public MyTaskController MyTaskController { get; set; }
         private int? _currentIdUser;
 
-        private const int MinColumns = 2;
-        private const int MaxColumns = 6;
-        private List<Column> columns = new List<Column>();
+        int counter = 2;
         Column columnToDo = new Column("A FAIRE");
         Column columnDone = new Column("TERMINE");
 
@@ -37,7 +35,13 @@ namespace MyTaskManager.Views
         {
             columnToDo.DisplayColumn(pnlMainContainer);
             columnDone.DisplayColumn(pnlMainContainer);
-            DisplayTasks();
+
+            var tasks = MyTaskController.GetAllTasks(_currentIdUser);
+
+            foreach (var task in tasks)
+            {
+                columnToDo.AddTask(task);
+            }
         }
 
         private void btnAddTask_Click(object sender, EventArgs e)
@@ -49,28 +53,35 @@ namespace MyTaskManager.Views
 
         private void AddTaskView_TaskAdded(object sender, EventArgs e)
         {
-            DisplayTasks();
-        }
-
-
-        private void DisplayTasks()
-        {
             var tasks = MyTaskController.GetAllTasks(_currentIdUser);
-            foreach (var task in tasks)
-            {
-                columnToDo.AddTask(task);
-            }
+            columnToDo.AddTask(tasks.Last());
         }
-
 
         private void btnAddColumn_Click(object sender, EventArgs e)
         {
+            if (pnlMainContainer.Controls.Count < 6)
+            {
+                Column newColumn = new Column("Titre");
+                newColumn.DisplayColumn(pnlMainContainer);
+                counter++;
+            }
+            else
+            {
+                MessageBox.Show("Limitation à 6 colonnes maximum", "Limite des colonnes");
+            }
             
         }
 
         private void btnDeleteColumn_Click(object sender, EventArgs e)
         {
-            
+            if (pnlMainContainer.Controls.Count > 2)
+            {
+                pnlMainContainer.Controls.RemoveAt(counter-1);
+            }
+            else
+            {
+                MessageBox.Show("Limitation à 2 colonnes minimum", "Limite des colonnes");
+            }
         }
 
     }

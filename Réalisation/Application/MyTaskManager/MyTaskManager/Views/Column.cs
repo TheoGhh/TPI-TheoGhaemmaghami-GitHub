@@ -61,13 +61,12 @@ namespace MyTaskManager.Views
         private FlowLayoutPanel _flpnlColumn;
 
         const int INT_SPACING = 10;
-        const int COLUMN_WIDTH = 120;
+        const int COLUMN_WIDTH = 150;
 
         List<Column> columns = new List<Column>();
         public Column(string strTitle)
         {
             _pnlColumnContainer = new Panel();
-            _pnlColumnContainer.BorderStyle = BorderStyle.FixedSingle;
             _pnlColumnContainer.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom;           
 
             _lblTitle = new Label();
@@ -87,9 +86,10 @@ namespace MyTaskManager.Views
             _flpnlColumn.Location = new Point(0, _lblTitle.Bottom);
             _flpnlColumn.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom;
             _flpnlColumn.BorderStyle = BorderStyle.FixedSingle;
-            _flpnlColumn.AutoScroll = true;
             _flpnlColumn.AllowDrop = true;
             _flpnlColumn.FlowDirection = FlowDirection.TopDown;
+            _flpnlColumn.AutoScroll = true;
+            _flpnlColumn.WrapContents = false;
             _pnlColumnContainer.Controls.Add(_flpnlColumn);
 
             _tbxEditTitle = new TextBox();

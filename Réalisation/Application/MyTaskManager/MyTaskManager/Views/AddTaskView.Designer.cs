@@ -178,10 +178,11 @@
             // 
             this.datEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datEndDate.Location = new System.Drawing.Point(128, 260);
+            this.datEndDate.MinDate = new System.DateTime(2024, 5, 30, 0, 0, 0, 0);
             this.datEndDate.Name = "datEndDate";
             this.datEndDate.Size = new System.Drawing.Size(134, 20);
             this.datEndDate.TabIndex = 10;
-            this.datEndDate.Value = new System.DateTime(2024, 5, 16, 0, 0, 0, 0);
+            this.datEndDate.Value = new System.DateTime(2024, 5, 30, 0, 0, 0, 0);
             // 
             // cbxPriority
             // 
