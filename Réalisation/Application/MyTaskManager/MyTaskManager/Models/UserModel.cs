@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using MyTaskManager.Controllers;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
+using BCrypt.Net;
 
 namespace MyTaskManager.Models
 {
@@ -16,12 +18,18 @@ namespace MyTaskManager.Models
         private readonly MySqlConnection _connection = new MySqlConnection(
             "server=localhost; database=db_mytaskmanager; user id=root; password=root");
 
+
         public UserModel()
         {
 
         }
 
-        public bool RegisterUserInDatabase(User newUser)
+        /// <summary>
+        /// Enregistre le nouvel utilisateur dans la base de données de manière sécurisé
+        /// </summary>
+        /// <param name="newUser">Objet Utilisateur regroupant les informations insérées par l'utilisateur</param>
+        /// <returns>Retourne un booléen : True si la création du nouveau compte a réussi ou False si la création a échoué avec l'erreur affilié</returns>
+        public (bool,Exception) RegisterUserInDatabase(User newUser)
         {
             try
             {
@@ -34,8 +42,8 @@ namespace MyTaskManager.Models
                 // Prépare la requête SQL pour insérer un nouvel utilisateur dans la base de données
                 MySqlCommand query = new MySqlCommand(
                     "INSERT INTO t_user VALUES(NULL, @useFirstName, @useLastName, @useLogin, @usePassword)", _connection);
-
-                // Data Binding (permet d'éviter les injection SQL)
+                
+                // Data Binding (permet de faire de la liaison de données et par conséquent d'éviter les injection SQL)
                 query.Parameters.AddWithValue("@useFirstName", newUser.FirstName);
                 query.Parameters.AddWithValue("@useLastName", newUser.LastName);
                 query.Parameters.AddWithValue("@useLogin", newUser.Login);
@@ -44,22 +52,23 @@ namespace MyTaskManager.Models
                 // Exécute la requête SQL
                 int result = query.ExecuteNonQuery();
 
-                // Vérifie si l'opération a fonctionné
+                // Vérifie si au moins une colonne a été affectée et par conséquent si l'opération a fonctionnée
                 if (result > 0)
                 {
-                    return true;
+                    return (true, null);
                 }
                 else
                 {
-                    return false;
+                    return (false, null);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return false;              
+                return (false, ex);              
             }
             finally
             {
+                // Ferme la connexion indépendamment du résultat de l'opération (succès ou échec)
                 _connection.Close();
             }
         }
@@ -69,8 +78,8 @@ namespace MyTaskManager.Models
         /// </summary>
         /// <param name="login"></param>
         /// <param name="password"></param>
-        /// <returns></returns>
-        public int? LoginUserToDB(string login, string password)
+        /// <returns>Retourne l'id de l'utilisateur connecté si la connexion au compte a réussi. Retourne null ou bien l'erreur si la connexion a échoué</returns>
+        public (int?, Exception) LoginUserToDB(string login, string password)
         {
             try
             {
@@ -93,30 +102,30 @@ namespace MyTaskManager.Models
                     // Récupère le mot de passe haché de la base de données
                     string hashedPassword = reader["usePassword"].ToString();                  
 
-                    // Vérifie si la correspondance entre les mots de passe
+                    // Vérifie la correspondance entre les mots de passe
                     if(BCrypt.Net.BCrypt.Verify(password, hashedPassword))
                     {
                         // Stocke et retourne l'id de l'utilisateur actuel 
                         int currentUserId = (int)reader["idUser"];
-                        return currentUserId;
+                        return (currentUserId, null);
                     }
                     else
                     {
-                        return null;
+                        return (null, null);
                     }
                 }
                 else
                 {
-                    return null;
+                    return (null, null);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return null;
+                return (null, ex);
             }
             finally
             {
-                // S'assure que la connexion se ferme peu importe si l'opération a fonctionné ou pas
+                // Ferme la connexion indépendamment du résultat de l'opération (succès ou échec)
                 _connection.Close();
             }
 

@@ -32,23 +32,16 @@ namespace MyTaskManager.Views
 
         private void btnAddTask_Click(object sender, EventArgs e)
         {
-            try
+            if (MyTaskController.AddTask(tbxTitle.Text, tbxText.Text, datEndDate.Value, cbxPriority.SelectedIndex, tbxUrl.Text, _imgData, _idCurrentUser).Item1)
             {
-                if(MyTaskController.AddTask(tbxTitle.Text, tbxText.Text, datEndDate.Value, cbxPriority.SelectedIndex, tbxUrl.Text, _imgData, _idCurrentUser))
-                {
-                    MessageBox.Show("Nouvelle tâche ajoutée avec succès !", "Ajout d'une nouvelle tâche");
-                    TaskAdded?.Invoke(this, EventArgs.Empty);
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Erreur lors de la tentative d'ajout d'une nouvelle tâche", "Ajout d'une nouvelle tâche");
-                }
+                MessageBox.Show("Nouvelle tâche ajoutée avec succès !", "Ajout d'une nouvelle tâche");
+                TaskAdded?.Invoke(this, EventArgs.Empty);
+                this.Close();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
-            }      
+                MessageBox.Show("Erreur : " + MyTaskController.AddTask(tbxTitle.Text, tbxText.Text, datEndDate.Value, cbxPriority.SelectedIndex, tbxUrl.Text, _imgData, _idCurrentUser).Item2.Message, "Ajout d'une nouvelle tâche");
+            }    
         }
 
         /// <summary>

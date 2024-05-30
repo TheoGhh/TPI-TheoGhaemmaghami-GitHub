@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using MyTaskManager.Controllers;
 
@@ -26,7 +25,7 @@ namespace MyTaskManager.Models
         /// </summary>
         /// <param name="newTask"></param>
         /// <returns></returns>
-        public bool AddTaskToDatabase(MyTask newTask)
+        public (bool, Exception) AddTaskToDatabase(MyTask newTask)
         {
             try
             {
@@ -53,17 +52,16 @@ namespace MyTaskManager.Models
                 // Vérifie si l'opération a fonctionné
                 if (result > 0)
                 {
-                    return true;
+                    return (true, null);
                 }
                 else
                 {
-                    return false;
+                    return (false, null);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-                return false;
+                return (false, ex);
             }
             finally
             {
@@ -71,7 +69,7 @@ namespace MyTaskManager.Models
             }
         }
 
-        public List<MyTask> GetTasksFromDatabase(int? currentUserId)
+        public (List<MyTask>, Exception) GetTasksFromDatabase(int? currentUserId)
         {
             try
             {
@@ -110,12 +108,11 @@ namespace MyTaskManager.Models
                     tasks.Add(task);
                 }
 
-                return tasks;
+                return (tasks, null);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-                return null;
+                return (null, ex);
             }
             finally
             {

@@ -23,17 +23,17 @@ namespace MyTaskManager.Views
 
         private void btnCreateUser_Click(object sender, EventArgs e)
         {
-            if(UserController.RegisterUser(tbxFirstName.Text, tbxLastName.Text, tbxLogin.Text, tbxPassword.Text))
+            // Transmets les informations insérées au Contrôleur et vérifie si la création du nouveau compte utilisateur a fonctionnée
+            if(UserController.RegisterUser(tbxFirstName.Text, tbxLastName.Text, tbxLogin.Text, tbxPassword.Text).Item1)
             {
                 MessageBox.Show("Nouveau compte utilisateur crée avec succès !", "Création d'un compte");
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Echec de la tentative de création d'un compte !", "Création de compte");
+                string errorMessage = UserController.RegisterUser(tbxFirstName.Text, tbxLastName.Text, tbxLogin.Text, tbxPassword.Text).Item2.Message;
+                MessageBox.Show("Erreur : " + errorMessage, "Création de compte");
             }
-            
-            
         }
     }
 }

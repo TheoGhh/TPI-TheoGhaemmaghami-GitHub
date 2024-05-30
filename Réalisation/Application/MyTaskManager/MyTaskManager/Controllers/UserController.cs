@@ -18,14 +18,30 @@ namespace MyTaskManager.Controllers
             _model.UserController = this;
         }
 
-        public bool RegisterUser(string firstName , string lastName, string login, string password)
+        /// <summary>
+        /// Crée un objet Utilisateur avec les informations de l'utilisateur envoyées par la Vue pour l'envoyer au Modèle
+        /// </summary>
+        /// <param name="firstName">Prénom du compte Utilisateur</param>
+        /// <param name="lastName">Nom du compte Utilisateur</param>
+        /// <param name="login">Identifiant du compte Utilisateur</param>
+        /// <param name="password">Mot de passe du compte Utilisateur</param>
+        /// <returns>Retourne un booléen True si la création de nouveau compte a réussi ou False si la création a échoué avec l'erreur affilié</returns>
+        public (bool, Exception) RegisterUser(string firstName , string lastName, string login, string password)
         {
-            User newUser = new User(firstName, lastName, login, password);
+            try
+            {
+                User newUser = new User(firstName, lastName, login, password);
 
-            return _model.RegisterUserInDatabase(newUser);
+                // Transmets les informations du nouveau compte utilisateur au Modèle
+                return _model.RegisterUserInDatabase(newUser);
+            }
+            catch (Exception ex)
+            {
+                return (false, ex);
+            }          
         }
 
-        public int? LoginUser(string login, string password)
+        public (int?, Exception) LoginUser(string login, string password)
         {
             return _model.LoginUserToDB(login, password);   
         }

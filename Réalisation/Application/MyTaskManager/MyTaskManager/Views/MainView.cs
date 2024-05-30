@@ -40,7 +40,7 @@ namespace MyTaskManager.Views
             columnToDo.DisplayColumn(pnlMainContainer);
             columnDone.DisplayColumn(pnlMainContainer);
 
-            var tasks = MyTaskController.GetAllTasks(_currentIdUser);
+            var tasks = MyTaskController.GetAllTasks(_currentIdUser).Item1;
 
             foreach (var task in tasks)
             {
@@ -69,7 +69,7 @@ namespace MyTaskManager.Views
         /// <param name="e"></param>
         private void AddTaskView_TaskAdded(object sender, EventArgs e)
         {
-            var tasks = MyTaskController.GetAllTasks(_currentIdUser);
+            var tasks = MyTaskController.GetAllTasks(_currentIdUser).Item1;
             columnToDo.AddTask(tasks.Last());
         }
 
