@@ -79,13 +79,11 @@ namespace MyTaskManager.Views
                     pnlDropImage.BackgroundImageLayout = ImageLayout.Stretch;
 
                     // Stocke et convertit l'image en tableau d'octets
-                    _imgData = ImageToByteArray(image);
-
-                    
+                    _imgData = ImageToByteArray(image);  
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"An error occurred: {ex.Message}");
+                    MessageBox.Show("Erreur : " + ex.Message);
                 }
             }
         }

@@ -41,6 +41,12 @@ namespace MyTaskManager.Controllers
             }          
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="login">Login de l'utilisateur</param>
+        /// <param name="password">Mot de passe de l'utilisateur</param>
+        /// <returns>Retourne l'id de l'utilisateur connecté si la connexion au compte a réussi. Retourne null ou bien l'erreur si la connexion a échoué</returns>
         public (int?, Exception) LoginUser(string login, string password)
         {
             return _model.LoginUserToDB(login, password);   

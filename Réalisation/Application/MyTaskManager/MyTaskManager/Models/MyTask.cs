@@ -82,20 +82,9 @@ namespace MyTaskManager.Models
             _fkUser = fkUser;
 
             DisplayTask();
-
-            this.MouseDown += MyTask_MouseDown;
+            
 
         }
-
-        private void MyTask_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                DoDragDrop(this, DragDropEffects.Move);
-            }
-        }
-
-        
 
         public void DisplayTask()
         {
@@ -105,6 +94,10 @@ namespace MyTaskManager.Models
             this.Size = new Size(INT_SIZE, INT_SIZE);
             this.BackColor = Color.FromArgb(255, 207, 0);
             this.BorderStyle = BorderStyle.FixedSingle;
+
+            this.MouseEnter += MyTask_MouseEnter;
+            this.MouseLeave += MyTask_MouseLeave;
+            this.MouseDown += MyTask_MouseDown;   
 
             Panel pnlTitle = new Panel();
             pnlTitle.BorderStyle = BorderStyle.FixedSingle;
@@ -180,6 +173,29 @@ namespace MyTaskManager.Models
             }*/
         }
 
+        private void MyTask_MouseLeave(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(255, 207, 0);
+        }
+
+        private void MyTask_MouseEnter(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(255, 195, 0);
+        }
+
+        private void MyTask_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                DoDragDrop(this, DragDropEffects.Move);
+            }
+        }
+
+        /// <summary>
+        /// Lorsque l'utilisateur clique sur l'URL, le lien URL s'ouvre
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LblUrl_Click(object sender, EventArgs e)
         {
             Process.Start(Url);
