@@ -112,8 +112,9 @@
             // 
             // pnlMainContainer
             // 
-            this.pnlMainContainer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlMainContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlMainContainer.AutoScroll = true;
             this.pnlMainContainer.Location = new System.Drawing.Point(165, 10);
             this.pnlMainContainer.Name = "pnlMainContainer";

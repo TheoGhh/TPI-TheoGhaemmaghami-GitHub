@@ -82,7 +82,20 @@ namespace MyTaskManager.Models
             _fkUser = fkUser;
 
             DisplayTask();
+
+            this.MouseDown += MyTask_MouseDown;
+
         }
+
+        private void MyTask_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                DoDragDrop(this, DragDropEffects.Move);
+            }
+        }
+
+        
 
         public void DisplayTask()
         {

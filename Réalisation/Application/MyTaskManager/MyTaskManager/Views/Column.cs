@@ -55,7 +55,9 @@ namespace MyTaskManager.Views
             _flpnlColumn.AutoScroll = true;
             _flpnlColumn.WrapContents = false;
             _pnlColumnContainer.Controls.Add(_flpnlColumn);
-            // EVENEMENTS DRAG & DROP A AJOUTER ICI ! //
+
+            _flpnlColumn.DragEnter += FlpnlColumn_DragEnter;
+            _flpnlColumn.DragDrop += FlpnlColumn_DragDrop;
 
             // Textbox "invisible" permettant de renommer le titre de la colonne
             _tbxEditTitle = new TextBox();
@@ -74,13 +76,54 @@ namespace MyTaskManager.Views
             
         }
 
+        private void FlpnlColumn_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(typeof(MyTask)))
+            {
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                e.Effect = DragDropEffects.None;
+            }
+        }
+
+        private void FlpnlColumn_DragDrop(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(typeof(MyTask)))
+            {
+                MyTask task = (MyTask)e.Data.GetData(typeof(MyTask));
+
+                // Récupère la colonne qui contient la tâche avant le Drag & Drop
+                FlowLayoutPanel source = (FlowLayoutPanel)task.Parent;
+
+                // Récupère la colonne cible
+                FlowLayoutPanel target = sender as FlowLayoutPanel;
+
+                // Vérifie et empêche de glisser-déposer la tâche dans la colonne où elle se trouve déjà
+                if (source != target)
+                {
+                    // Supprime la tâche de la colonne qui contient la tâche avant le Drag & Drop
+                    source.Controls.Remove(task);
+
+                    // Ajoute la tâche dans la nouvelle colonne cible
+                    target.Controls.Add(task);
+                }
+                else
+                {
+                    MessageBox.Show("Vous ne pouvez pas glisser-déposer la tâche dans la colonne où elle se trouve déjà", "Glisser-Déposer");
+                }
+                
+            }
+        }
+
         /// <summary>
         /// Permet de placer et d'afficher la colonne dans l'interface principale
         /// </summary>
         /// <param name="pnlMainContainer">Conteneur pour les colonnes</param>
         public void DisplayColumn(Panel pnlMainContainer)
         {
-            _pnlColumnContainer.Size = new Size(COLUMN_WIDTH, pnlMainContainer.Height - 10);
+            _pnlColumnContainer.Size = new Size(COLUMN_WIDTH, pnlMainContainer.Height - 30);
             _pnlColumnContainer.Location = new Point(pnlMainContainer.Controls.Count * (_pnlColumnContainer.Width + INT_SPACING), 0);
             _pnlColumnContainer.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom;
             pnlMainContainer.Controls.Add(_pnlColumnContainer);

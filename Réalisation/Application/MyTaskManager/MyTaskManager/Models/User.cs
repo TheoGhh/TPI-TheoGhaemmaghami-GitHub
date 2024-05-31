@@ -9,11 +9,11 @@ namespace MyTaskManager.Models
     public class User
     {
         // Attributs
-        private int _id;
-        private string _firstName;
-        private string _lastName;
-        private string _login;
-        private string _password;
+        private int _id;            // Id du compte Utilisateur
+        private string _firstName;  // Prénom de l'utilisateur
+        private string _lastName;   // Nom de l'utilisateur
+        private string _login;      // Identifiant de connexion de l'utilisateur
+        private string _password;   // Mot de passe de l'utilisateur
 
         // Paramètres
         public int Id

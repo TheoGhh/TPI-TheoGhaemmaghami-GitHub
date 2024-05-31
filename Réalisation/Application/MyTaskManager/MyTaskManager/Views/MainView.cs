@@ -95,7 +95,7 @@ namespace MyTaskManager.Views
         }
 
         /// <summary>
-        /// Permet de supprimer une colonne     ////////////      !!  BUG !!
+        /// Permet de supprimer la dernière colonne 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -103,7 +103,7 @@ namespace MyTaskManager.Views
         {
             if (pnlMainContainer.Controls.Count > 2)
             {
-                pnlMainContainer.Controls.RemoveAt(counter-1);
+                pnlMainContainer.Controls.RemoveAt(pnlMainContainer.Controls.Count-1);
                 counter--;
             }
             else
