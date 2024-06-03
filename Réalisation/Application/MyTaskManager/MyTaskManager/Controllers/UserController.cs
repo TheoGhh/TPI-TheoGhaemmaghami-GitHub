@@ -12,6 +12,7 @@ namespace MyTaskManager.Controllers
     {
         private UserModel _model;
 
+        // Constructeur
         public UserController(UserModel model)
         {
             _model = model;
@@ -42,7 +43,7 @@ namespace MyTaskManager.Controllers
         }
 
         /// <summary>
-        /// 
+        /// Récupère les informations depuis la Vue et les envoie au Modèle pour le processus d'authentification
         /// </summary>
         /// <param name="login">Login de l'utilisateur</param>
         /// <param name="password">Mot de passe de l'utilisateur</param>

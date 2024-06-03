@@ -129,6 +129,7 @@
             this.Controls.Add(this.pnlMainContainer);
             this.Controls.Add(this.pnlMenu);
             this.Name = "MainView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyTaskManager";
             this.Load += new System.EventHandler(this.MainView_Load);
             this.pnlMenu.ResumeLayout(false);

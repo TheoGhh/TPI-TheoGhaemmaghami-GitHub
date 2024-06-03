@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MyTaskManager.Controllers;
 
@@ -15,12 +8,18 @@ namespace MyTaskManager.Views
     {
         public UserController UserController { get; set; }  // Accès Contrôleur des utilisateurs
 
+        // Constructeur
         public RegisterView(UserController userController)
         {
             InitializeComponent();
             UserController = userController;
         }
 
+        /// <summary>
+        /// Lorsque l'utilisateur clique sur le bouton "Créer un compte", lance le processus de création de compte Utilisateur
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCreateUser_Click(object sender, EventArgs e)
         {
             // Transmets les informations insérées au Contrôleur et vérifie si la création du nouveau compte utilisateur a fonctionnée

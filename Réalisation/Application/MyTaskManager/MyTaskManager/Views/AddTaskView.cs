@@ -1,51 +1,85 @@
-﻿using MySql.Data.MySqlClient;
-using MyTaskManager.Controllers;
+﻿using MyTaskManager.Controllers;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MyTaskManager.Views
 {
     public partial class AddTaskView : Form
     {
-        public MyTaskController MyTaskController { get; set; }
+        public MyTaskController MyTaskController { get; set; }  // Accès au Contrôleur des tâches
 
-        private readonly int? _idCurrentUser;
-        private byte[] _imgData;
+        private readonly int? _idCurrentUser;   // ID de l'utilisateur actuellement connecté
+        private byte[] _imgData;    // Tableau d'octets pour stocker les données de l'image                   
 
+        // Evenement déclenché lorsqu'une tâche est ajoutée
         public event EventHandler TaskAdded;
 
+        // Constructeur
         public AddTaskView(int? idUser, MyTaskController myTaskController)
         {
             InitializeComponent();
             _idCurrentUser = idUser;
-            MyTaskController = myTaskController;
-            datEndDate.MinDate = DateTime.Today;
-        }
-
-        private void btnAddTask_Click(object sender, EventArgs e)
-        {
-            if (MyTaskController.AddTask(tbxTitle.Text, tbxText.Text, datEndDate.Value, cbxPriority.SelectedIndex, tbxUrl.Text, _imgData, _idCurrentUser).Item1)
-            {
-                MessageBox.Show("Nouvelle tâche ajoutée avec succès !", "Ajout d'une nouvelle tâche");
-                TaskAdded?.Invoke(this, EventArgs.Empty);
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Erreur : " + MyTaskController.AddTask(tbxTitle.Text, tbxText.Text, datEndDate.Value, cbxPriority.SelectedIndex, tbxUrl.Text, _imgData, _idCurrentUser).Item2.Message, "Ajout d'une nouvelle tâche");
-            }    
+            MyTaskController = myTaskController;   
         }
 
         /// <summary>
-        /// Copie l'image qui se trouve 
+        /// Lorsque l'utilisateur clique sur le bouton "Ajouter une tâche", lance le processus de création d'une nouvelle tâche
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnAddTask_Click(object sender, EventArgs e)
+        {
+            // Vérifie que la tâche possède au moins titre
+            if (tbxTitle.Text != "")
+            {
+                // Lance le processus d'ajout d'une tâche (envoi des informations au Contrôleur) et stocke le résultat de l'opération
+                bool isSuccess = MyTaskController.AddTask(
+                    tbxTitle.Text, 
+                    tbxText.Text, 
+                    datEndDate.Value, 
+                    cbxPriority.Text, 
+                    tbxUrl.Text, 
+                    _imgData, 
+                    _idCurrentUser).Item1;
+
+                // Vérifie si l'ajout d'une nouvelle tâche a réussi
+                if (isSuccess)
+                {
+                    MessageBox.Show("Nouvelle tâche ajoutée avec succès !", "Ajout d'une nouvelle tâche");
+
+                    // Déclenche l'évenement TaskAdded
+                    TaskAdded?.Invoke(this, EventArgs.Empty);
+                    this.Close();
+                }
+                else
+                {
+                    // Stocke le message d'erreur 
+                    string errorMessage = MyTaskController.AddTask(
+                        tbxTitle.Text, 
+                        tbxText.Text, 
+                        datEndDate.Value, 
+                        cbxPriority.Text, 
+                        tbxUrl.Text,
+                        _imgData, 
+                        _idCurrentUser).Item2.Message;
+
+                    // Affiche le message d'erreur si l'ajout de la tâche a échoué
+                    MessageBox.Show("Erreur : " + errorMessage, "Ajout d'une nouvelle tâche");
+                }
+            }
+            else
+            {
+                // Affiche un message d'erreur si le champ "Titre" n'a pas été rempli
+                lblTitleEmpty.Visible = true;
+                tbxTitle.BackColor = Color.LightCoral;
+            }
+         
+        }
+
+        /// <summary>
+        /// Evenement lorsque un élément est glissé par-dessus le contrôle
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -94,8 +128,7 @@ namespace MyTaskManager.Views
         /// <param name="image">Image que l'utilisateur a Drag & Drop</param>
         /// <returns>Retourne un tableau d'octets</returns>
         private byte[] ImageToByteArray(Image image)
-        {
-            
+        {           
             using (MemoryStream ms = new MemoryStream())
             {
                 // Sauvegarde l'image (Format JPEG car réduit la taille que prend l'image)
@@ -104,6 +137,6 @@ namespace MyTaskManager.Views
                 // Convertit le résultat en tableau d'octets.
                 return ms.ToArray();
             }
-        }       
+        }    
     }
 }

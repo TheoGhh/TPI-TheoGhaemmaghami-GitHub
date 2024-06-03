@@ -1,31 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using MyTaskManager.Controllers;
-using System.Windows.Forms;
-using System.Runtime.InteropServices;
-using BCrypt.Net;
+
 
 namespace MyTaskManager.Models
 {
     public class UserModel
     {
-        public UserController UserController { get; set; }
+        public UserController UserController { get; set; }  // Accès au Contrôleur des Utilisateurs
 
+        // Connexion à la base de données MySQL
         private readonly MySqlConnection _connection = new MySqlConnection(
             "server=localhost; database=db_mytaskmanager; user id=root; password=root");
 
-
+        // Constructeur
         public UserModel()
         {
 
         }
 
         /// <summary>
-        /// Enregistre le nouvel utilisateur dans la base de données de manière sécurisé
+        /// Enregistre le nouvel utilisateur dans la base de données de manière sécurisée
         /// </summary>
         /// <param name="newUser">Objet Utilisateur regroupant les informations insérées par l'utilisateur</param>
         /// <returns>Retourne un booléen : True si la création du nouveau compte a réussi ou False si la création a échoué avec l'erreur affilié</returns>
@@ -74,7 +69,7 @@ namespace MyTaskManager.Models
         }
 
         /// <summary>
-        /// 
+        /// Connecte l'utilisateur en vérifiant ses informations d'identification
         /// </summary>
         /// <param name="login"></param>
         /// <param name="password"></param>

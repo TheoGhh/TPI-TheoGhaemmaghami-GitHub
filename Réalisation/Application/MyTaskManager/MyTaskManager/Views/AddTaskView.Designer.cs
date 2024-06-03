@@ -44,6 +44,7 @@
             this.cbxPriority = new System.Windows.Forms.ComboBox();
             this.btnAddTask = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.lblTitleEmpty = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
@@ -122,12 +123,12 @@
             // 
             this.lblTaskTitle.AutoSize = true;
             this.lblTaskTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTaskTitle.Location = new System.Drawing.Point(68, 124);
+            this.lblTaskTitle.Location = new System.Drawing.Point(61, 123);
             this.lblTaskTitle.Margin = new System.Windows.Forms.Padding(10, 10, 6, 12);
             this.lblTaskTitle.Name = "lblTaskTitle";
-            this.lblTaskTitle.Size = new System.Drawing.Size(37, 18);
+            this.lblTaskTitle.Size = new System.Drawing.Size(43, 18);
             this.lblTaskTitle.TabIndex = 6;
-            this.lblTaskTitle.Text = "Titre";
+            this.lblTaskTitle.Text = "Titre*";
             // 
             // pbxLogo
             // 
@@ -142,6 +143,7 @@
             // tbxTitle
             // 
             this.tbxTitle.Location = new System.Drawing.Point(128, 124);
+            this.tbxTitle.MaxLength = 20;
             this.tbxTitle.Name = "tbxTitle";
             this.tbxTitle.Size = new System.Drawing.Size(134, 20);
             this.tbxTitle.TabIndex = 6;
@@ -149,9 +151,10 @@
             // tbxText
             // 
             this.tbxText.Location = new System.Drawing.Point(128, 164);
+            this.tbxText.MaxLength = 80;
             this.tbxText.Multiline = true;
             this.tbxText.Name = "tbxText";
-            this.tbxText.Size = new System.Drawing.Size(134, 71);
+            this.tbxText.Size = new System.Drawing.Size(134, 66);
             this.tbxText.TabIndex = 7;
             // 
             // tbxUrl
@@ -220,11 +223,25 @@
             this.lblTitle.TabIndex = 13;
             this.lblTitle.Text = "Ajouter une tâche";
             // 
+            // lblTitleEmpty
+            // 
+            this.lblTitleEmpty.AutoSize = true;
+            this.lblTitleEmpty.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleEmpty.ForeColor = System.Drawing.Color.Red;
+            this.lblTitleEmpty.Location = new System.Drawing.Point(125, 145);
+            this.lblTitleEmpty.Margin = new System.Windows.Forms.Padding(10, 10, 6, 12);
+            this.lblTitleEmpty.Name = "lblTitleEmpty";
+            this.lblTitleEmpty.Size = new System.Drawing.Size(183, 13);
+            this.lblTitleEmpty.TabIndex = 12;
+            this.lblTitleEmpty.Text = "Une tâche doit avoir au moins un titre";
+            this.lblTitleEmpty.Visible = false;
+            // 
             // AddTaskView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(366, 568);
+            this.Controls.Add(this.lblTitleEmpty);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnAddTask);
             this.Controls.Add(this.cbxPriority);
@@ -237,7 +254,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "AddTaskView";
-            this.Text = "AddTaskView";
+            this.Text = "Ajout d\'une nouvelle tâche";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
@@ -264,5 +281,6 @@
         private System.Windows.Forms.ComboBox cbxPriority;
         private System.Windows.Forms.Button btnAddTask;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label lblTitleEmpty;
     }
 }

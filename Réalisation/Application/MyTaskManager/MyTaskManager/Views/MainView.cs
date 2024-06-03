@@ -1,55 +1,56 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MyTaskManager.Controllers;
-using MyTaskManager.Models;
+using System.Drawing;
 
 namespace MyTaskManager.Views
 {
     public partial class MainView : Form
-    {     
-        
+    {        
         public UserController UserController { get; set; }  // Accès Contrôleur des utilisateurs
         public MyTaskController MyTaskController { get; set; }  // Accès Contrôleur des tâches
 
         private int? _currentIdUser;    // Stocke l'ID de l'utilisateur actuellement connecté
 
-        int counter = 2;
-        Column columnToDo = new Column("A FAIRE");
-        Column columnDone = new Column("TERMINE");
+        Column columnToDo = new Column("A FAIRE");  // Colonne A FAIRE par défaut
+        Column columnDone = new Column("TERMINE");  // Colonne TERMINE par défaut
 
+        // Constructeur
         public MainView(int? idUser, UserController userController, MyTaskController myTaskController)
         {
             InitializeComponent();
             UserController = userController;       
             _currentIdUser = idUser;
             MyTaskController = myTaskController;    
-            
-            MinimumSize = new Size(pnlMenu.Width + (counter*columnToDo.Width),pnlMenu.Height);
         }
 
+        /// <summary>
+        /// Détermine ce qui se produit lorsque la fenêtre se charge 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MainView_Load(object sender, EventArgs e)
         {
             // Affiche les 2 colonnes par défaut
             columnToDo.DisplayColumn(pnlMainContainer);
             columnDone.DisplayColumn(pnlMainContainer);
 
+            MinimumSize = new Size(pnlMenu.Width + pnlMainContainer.Controls.Count * columnToDo.Width, pnlMenu.Height);
+
+            // Stocke et récupère toutes les tâches de l'utilisateur connecté
             var tasks = MyTaskController.GetAllTasks(_currentIdUser).Item1;
 
+            // Ajoute toutes les tâches à la colonne A FAIRE et les affiche
             foreach (var task in tasks)
             {
                 columnToDo.AddTask(task);
+                task.DisplayTask();
             }
         }
 
         /// <summary>
-        /// Ouvre la vue "Ajout d'une nouvelle tâche"
+        /// Lorsque l'utilisateur clique sur le bouton "Ajouter une tâche", ouvre la vue "Ajout d'une nouvelle tâche"
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -58,7 +59,7 @@ namespace MyTaskManager.Views
             AddTaskView addTaskView = new AddTaskView(_currentIdUser, MyTaskController);
             addTaskView.Show();
 
-            // Invoque l'évenement d'ajout d'une nouvelle tâche
+            // Abonne l'évenement TaskAdded à la méthode correspondante
             addTaskView.TaskAdded += AddTaskView_TaskAdded;
         }
 
@@ -71,21 +72,22 @@ namespace MyTaskManager.Views
         {
             var tasks = MyTaskController.GetAllTasks(_currentIdUser).Item1;
             columnToDo.AddTask(tasks.Last());
+            tasks.Last().DisplayTask();
         }
 
         /// <summary>
-        /// Permet d'ajouter une nouvelle colonne
+        /// Lorsque l'utilisateur clique sur "Ajouter une colonne", permet d'ajouter une nouvelle colonne
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnAddColumn_Click(object sender, EventArgs e)
         {
-            // Contrôle la limite maximum de colonnes
+            // Contrôle la limite maximum du nombre de colonnes
             if (pnlMainContainer.Controls.Count < 6)
             {
                 Column newColumn = new Column("Titre");
                 newColumn.DisplayColumn(pnlMainContainer);
-                counter++;
+                
             }
             else
             {
@@ -95,16 +97,24 @@ namespace MyTaskManager.Views
         }
 
         /// <summary>
-        /// Permet de supprimer la dernière colonne 
+        /// Lorsque l'utilisateur clique sur "Supprimer une colonne", permet de supprimer la dernière colonne 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnDeleteColumn_Click(object sender, EventArgs e)
         {
+            // Contrôle la limite minimum du nombre de colonnes
             if (pnlMainContainer.Controls.Count > 2)
             {
-                pnlMainContainer.Controls.RemoveAt(pnlMainContainer.Controls.Count-1);
-                counter--;
+                DialogResult result = MessageBox.Show("La suppression de la dernière colonne entraînera la suppression temporaires des tâches qu'elle contient." +
+                    "\n\nLa suppression n'est que visuelle. Les tâches réapparaîtront dans la première colonne lorsque vous redémarrerez l'application" +
+                    "\n\n\nVoulez-vous vraiment continuer ?", 
+                    "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    pnlMainContainer.Controls.RemoveAt(pnlMainContainer.Controls.Count - 1);
+                }           
             }
             else
             {

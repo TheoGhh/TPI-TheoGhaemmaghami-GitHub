@@ -9,14 +9,12 @@ using MyTaskManager.Models;
 
 namespace MyTaskManager.Views
 {
- 
-
     public class Column : Panel
     {
-        private Panel _pnlColumnContainer;
-        private Label _lblTitle;
-        private TextBox _tbxEditTitle;
-        private FlowLayoutPanel _flpnlColumn; 
+        private Panel _pnlColumnContainer;  // Conteneur pour le titre, le conteneur des tâches
+        private Label _lblTitle;        // Titre de la colonne
+        private TextBox _tbxEditTitle;          // Textbox qui ermet de réécrire le titre
+        private FlowLayoutPanel _flpnlColumn;   // Conteneur des tâches
 
         const int INT_SPACING = 10; // Espacement entre les colonnes
         const int COLUMN_WIDTH = 150; // Largeur de la colonne
@@ -24,7 +22,7 @@ namespace MyTaskManager.Views
         /// <summary>
         /// Constructeur 
         /// </summary>
-        /// <param name="strTitle"></param>
+        /// <param name="strTitle">Titre de la colonne</param>
         public Column(string strTitle)
         {
             // Conteneur de la colonne (contient le titre et la colonne)
@@ -40,7 +38,7 @@ namespace MyTaskManager.Views
             _lblTitle.Location = new Point(0, 0);
             _pnlColumnContainer.Controls.Add(_lblTitle);
 
-            // Evenements visuels et qui permettent de changer le titre de la colonne
+            // Abonnent le titre de la colonne à des méthodes "d'animation visuel" et qui permettent de changer le titre de la colonne
             _lblTitle.MouseEnter += LblTitle_MouseEnter;
             _lblTitle.MouseLeave += LblTitle_MouseLeave;
             _lblTitle.Click += LblTitle_Click;
@@ -56,10 +54,11 @@ namespace MyTaskManager.Views
             _flpnlColumn.WrapContents = false;
             _pnlColumnContainer.Controls.Add(_flpnlColumn);
 
+            // Abonnent la colonne où vont s'afficher les tâches aux méthodes de Drag & Drop
             _flpnlColumn.DragEnter += FlpnlColumn_DragEnter;
             _flpnlColumn.DragDrop += FlpnlColumn_DragDrop;
 
-            // Textbox "invisible" permettant de renommer le titre de la colonne
+            // Editeur de titre : Textbox "invisible" permettant de renommer le titre de la colonne
             _tbxEditTitle = new TextBox();
             _tbxEditTitle.Size = new Size(_flpnlColumn.Width, _lblTitle.Height);
             _tbxEditTitle.Location = _lblTitle.Location;
@@ -71,11 +70,16 @@ namespace MyTaskManager.Views
             _tbxEditTitle.Hide();
             _pnlColumnContainer.Controls.Add(_tbxEditTitle);
          
+            // Abonnent le textbox éditeur de titre aux méthodes 
             _tbxEditTitle.LostFocus += TbxEditTitle_LostFocus;
-            _tbxEditTitle.KeyPress += TbxEditTitle_KeyPress;
-            
+            _tbxEditTitle.KeyPress += TbxEditTitle_KeyPress;            
         }
 
+        /// <summary>
+        /// Evenement qui se produit lorsqu'un élément est glissé par dessus le contrôle
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FlpnlColumn_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(typeof(MyTask)))
@@ -88,8 +92,14 @@ namespace MyTaskManager.Views
             }
         }
 
+        /// <summary>
+        /// Evenement qui se produit lorsqu'un élément est déposé dans le contrôle
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FlpnlColumn_DragDrop(object sender, DragEventArgs e)
         {
+            // Vérifie si les données glissées sont du type MyTask
             if (e.Data.GetDataPresent(typeof(MyTask)))
             {
                 MyTask task = (MyTask)e.Data.GetData(typeof(MyTask));
@@ -112,8 +122,7 @@ namespace MyTaskManager.Views
                 else
                 {
                     MessageBox.Show("Vous ne pouvez pas glisser-déposer la tâche dans la colonne où elle se trouve déjà", "Glisser-Déposer");
-                }
-                
+                }                
             }
         }
 
@@ -132,7 +141,7 @@ namespace MyTaskManager.Views
         /// <summary>
         /// Permet d'ajouter une tâche à une colonne
         /// </summary>
-        /// <param name="task"></param>
+        /// <param name="task">Tâche à ajouter à la colonne</param>
         public void AddTask(MyTask task)
         {
             _flpnlColumn.Controls.Add(task);
@@ -173,7 +182,7 @@ namespace MyTaskManager.Views
         /// <summary>
         /// Met à jour le titre 
         /// </summary>
-        private void UpdateLabel()
+        private void UpdateTitle()
         {
             _lblTitle.Text = _tbxEditTitle.Text;
             _tbxEditTitle.Hide();
@@ -187,7 +196,7 @@ namespace MyTaskManager.Views
         /// <param name="e"></param>
         private void TbxEditTitle_LostFocus(object sender, EventArgs e)
         {
-            UpdateLabel();
+            UpdateTitle();
         }
 
         /// <summary>
@@ -199,7 +208,7 @@ namespace MyTaskManager.Views
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                UpdateLabel();
+                UpdateTitle();
             }
         }
     }

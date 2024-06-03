@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MyTaskManager.Controllers;
 
@@ -16,6 +9,7 @@ namespace MyTaskManager.Views
         public UserController UserController { get; set; }  // Accès Contrôleur des utilisateurs
         public MyTaskController MyTaskController { get; set; }  // Accès Contrôleurs des tâches
 
+        // Constructeur
         public LoginView(UserController userController, MyTaskController myTaskController)
         {
             InitializeComponent();
@@ -23,9 +17,14 @@ namespace MyTaskManager.Views
             MyTaskController = myTaskController;
         }
 
+        /// <summary>
+        /// Lorsque l'utilisateur clique sur le bouton "Connexion", lance le processus de login
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLoginUser_Click(object sender, EventArgs e)
         {
-            // Vérifie si la connexion a réussi
+            // Envoie les informations au Contrôleur et vérifie en retour si la connexion a réussi
             if (UserController.LoginUser(tbxLogin.Text, tbxPassword.Text).Item1 != null)
             {
                 // Si connexion réussie, stocke l'id de l'utilisateur connecté
@@ -47,11 +46,16 @@ namespace MyTaskManager.Views
                 }
                 else
                 {
-                    MessageBox.Show("Erreur : Login et/ou mot de passe incorrect");
+                    MessageBox.Show("Erreur : Mot de passe incorrect");
                 }               
             }
         }
 
+        /// <summary>
+        /// Lorsque l'utilisateur clique sur le bouton "Créer un compte", instancie et ouvre le formulaire de création d'un compte en lui donnant l'accès au Contrôleur adéquat
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnToCreateUser_Click(object sender, EventArgs e)
         {
             RegisterView registerView = new RegisterView(UserController);

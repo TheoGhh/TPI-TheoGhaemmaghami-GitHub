@@ -190,3 +190,6 @@ C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisati
 C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.csproj.CopyComplete
 C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.exe
 C:\Users\theghaemmaghami\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\Application\MyTaskManager\MyTaskManager\obj\Debug\MyTaskManager.pdb
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Drawing.Common.dll
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Drawing.Common.pdb
+E:\Documents\GitHub\TPI-TheoGhaemmaghami-GitHub\Réalisation\application\MyTaskManager\MyTaskManager\bin\Debug\System.Drawing.Common.xml
